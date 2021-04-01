@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>快速搭建 Hexo + next 博客</title>
-    <url>/post/undefined.html</url>
+    <url>/post/202103300830/</url>
     <content><![CDATA[<blockquote>
 <p>第一次搭建博客，使用的是hexo，第一篇献给 <a href="https://hexo.io/zh-cn/docs/">Hexo</a></p>
 </blockquote>
@@ -17,7 +17,7 @@
 <figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
 
 
-<p>在浏览器中打开 <a href="http://localhost:4000/">http://localhost:4000</a> ，就可以看到初始项目模板界面<br><img src="/post/undefined/202103312050.png" alt="图片"></p>
+<p>在浏览器中打开 <a href="http://localhost:4000/">http://localhost:4000</a> ，就可以看到初始项目模板界面<br><img src="/.io//202103312050.png" alt="图片"></p>
 <h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a><strong>打包</strong></h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
 <p>资源会被包到 Blog/public 文件夹下</p>
 <h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a><strong>发布</strong></h3><p>Hexo支持多种发布方式，我使用 <a href="https://hexo.io/zh-cn/docs/github-pages">github-pages</a> 的方式</p>
@@ -39,9 +39,9 @@
 <figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"><span class="symbol">theme:</span> <span class="keyword">next</span></span><br></pre></td></tr></table></figure>
 
 <p>再次执行 Hexo server,界面变为如下</p>
-<p><img src="/post/undefined/202103312227.png" alt="图片"></p>
+<p><img src="/.io//202103312227.png" alt="图片"></p>
 <p>next 主题配置项比较多，这里给出我的 <a href="https://github.com/lianglei777/FileResource/blob/master/Next-_config.yml">配置文件</a>，可以直接替换（ps: 我目前也在摸索中，配置不完整,以后属性了再补充）</p>
-<p>界面变化为如下<br><img src="/post/undefined/202103312239.png" alt="图片"></p>
+<p>界面变化为如下<br><img src="/.io//202103312239.png" alt="图片"></p>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>Hexo整体的搭建过程其实并不复杂，但是 hexo 和 next 的配置项太多了，我这里也只配置了部分设置，有些想自定义的地方的配置暂时还没找到==！,一个好看易用的博客还需要之后慢慢打磨。</p>
 ]]></content>
       <categories>
@@ -54,7 +54,7 @@
   </entry>
   <entry>
     <title>welcome</title>
-    <url>/post/undefined.html</url>
+    <url>/post/202103280830/</url>
     <content><![CDATA[<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">Welcome <span class="keyword">to</span> Leon B<span class="keyword">log</span></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>
