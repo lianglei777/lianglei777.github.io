@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>快速搭建 Hexo + next 博客</title>
+    <url>/p/undefined</url>
+    <content><![CDATA[<blockquote>
+<p>第一次搭建博客，使用的是hexo，第一篇献给 <a href="https://hexo.io/zh-cn/docs/">Hexo</a></p>
+</blockquote>
+<a id="more"></a>
+
+<p>如何搭建 <a href="https://nodejs.org/zh-cn/">Node</a> 环境这里就不赘述了，下面开始搭建流程</p>
+<h3 id="全局安装Hexo"><a href="#全局安装Hexo" class="headerlink" title="全局安装Hexo"></a><strong>全局安装Hexo</strong></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建项目-amp-安装依赖"><a href="#创建项目-amp-安装依赖" class="headerlink" title="创建项目 &amp; 安装依赖"></a><strong>创建项目 &amp; 安装依赖</strong></h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> hexo init Blog</span><br><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> Blog</span><br><span class="line"><span class="variable">$</span> npm install</span><br></pre></td></tr></table></figure>
+
+<p>运行命令</p>
+<figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+
+
+<p>在浏览器中打开 <a href="http://localhost:4000/">http://localhost:4000</a> ，就可以看到初始项目模板界面<br><img src="/p/undefined/202103312050.png" alt="图片"></p>
+<h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a><strong>打包</strong></h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
+<p>资源会被包到 Blog/public 文件夹下</p>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a><strong>发布</strong></h3><p>Hexo支持多种发布方式，我使用 <a href="https://hexo.io/zh-cn/docs/github-pages">github-pages</a> 的方式</p>
+<p>这里说一下我的个人思路<br>我在自己的 <a href="https://github.com/lianglei777">github</a> 上创建了三个repo，分别为命名FileResource、lianglei777.github.io、Blog</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">FileResource : 用于存放图片、文件等资源文件, 通过链接的形式在博客文章中引用</span><br><span class="line">lianglei777<span class="selector-class">.github</span><span class="selector-class">.io</span> : 打包后的发布repo，命名格式必须是 &lt;你的 GitHub 用户名&gt;<span class="selector-class">.github</span>.io</span><br><span class="line">Blog : 博客项目源代码repo，我设置成的了 私有，只有自己可以查看</span><br></pre></td></tr></table></figure>
+
+<p>这样可以让 <u>代码开发</u> 和 <u>发布模块</u> 分离，容易管理，资源使用链接形式，可以加快打包速度,不过网络差的情况下图片可能不展示，而且github在国内的访问速度可能不太好，也可以选择其他图床，感兴趣的可以自行研究。</p>
+<p>修改项目路径下配置文件字段 Blog/_config.yml</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repository:</span> https:<span class="comment">//github.com/lianglei777/lianglei777.github.io.git</span></span><br><span class="line"><span class="symbol">  branch:</span> main</span><br></pre></td></tr></table></figure>
+<p>repository 字段为 &lt;你的 GitHub 用户名&gt;.github.io 的git地址。</p>
+<p>发布命令:</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo deploy</span><br></pre></td></tr></table></figure>
+<p>浏览器访问 “ &lt;你的 GitHub 用户名&gt;.github.io “ 就可以查看。</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a><strong>安装主题</strong></h3><p>Hexo 支持很多第三方 <a href="https://hexo.io/themes/">主题</a>，我使用的是开源主题 <a href="https://theme-next.js.org/">Next</a></p>
+<p>根目录下执行</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
+
+<p>修改路径下文件中配置字段 Blog/_config.yml</p>
+<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"><span class="symbol">theme:</span> <span class="keyword">next</span></span><br></pre></td></tr></table></figure>
+
+<p>再次执行 Hexo server,界面变为如下</p>
+<p><img src="/p/undefined/202103312227.png" alt="图片"></p>
+<p>next 主题配置项比较多，这里给出我的 <a href="https://github.com/lianglei777/FileResource/blob/master/Next-_config.yml">配置文件</a>，可以直接替换（ps: 我目前也在摸索中，配置不完整,以后属性了再补充）</p>
+<p>界面变化为如下<br><img src="/p/undefined/202103312239.png" alt="图片"></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>Hexo整体的搭建过程其实并不复杂，但是 hexo 和 next 的配置项太多了，我这里也只配置了部分设置，有些想自定义的地方的配置暂时还没找到==！,一个好看易用的博客还需要之后慢慢打磨。</p>
+]]></content>
+      <categories>
+        <category>Algorithm</category>
+        <category>Sort</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>welcome</title>
+    <url>/p/undefined</url>
+    <content><![CDATA[<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">Welcome <span class="keyword">to</span> Leon B<span class="keyword">log</span></span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+</search>
