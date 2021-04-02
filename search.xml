@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>welcome</title>
-    <url>/post/202103280830/</url>
-    <content><![CDATA[<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">Welcome <span class="keyword">to</span> Leon B<span class="keyword">log</span></span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
     <title>快速搭建 Hexo + next 博客</title>
     <url>/post/202103300830/</url>
     <content><![CDATA[<blockquote>
@@ -49,27 +44,24 @@
 <p>界面变化为如下<br><img src="/post/202103300830/202103312239.png" alt="图片"></p>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>Hexo整体的搭建过程其实并不复杂，但是 hexo 和 next 的配置项太多了，我这里也只配置了部分设置，有些想自定义的地方的配置暂时还没找到==！,一个好看易用的博客还需要之后慢慢打磨。</p>
 <hr>
-<h2 id="Tip-2021-4-3-做了补充"><a href="#Tip-2021-4-3-做了补充" class="headerlink" title="Tip: 2021.4.3 做了补充"></a><strong>Tip: 2021.4.3 做了补充</strong></h2><p><strong>找到了一个很好的教程，跟着教程对我的博客进行了全面的优化</strong></p>
+<h3 id="Tip-2021-4-3-做了补充"><a href="#Tip-2021-4-3-做了补充" class="headerlink" title="Tip: 2021.4.3 做了补充"></a><strong>Tip: 2021.4.3 做了补充</strong></h3><p><strong>找到了一个很好的教程，跟着教程对我的博客进行了全面的优化</strong></p>
 <blockquote>
 <p>教程链接：<a href="https://wylu.me/tags/Hexo/">wylu</a></p>
 </blockquote>
-<h2 id="谈一下遇到的问题和优化思路"><a href="#谈一下遇到的问题和优化思路" class="headerlink" title="谈一下遇到的问题和优化思路"></a><strong>谈一下遇到的问题和优化思路</strong></h2><p><strong>1. 我的hexo版本是 5.4.0 教程中的hexo版本是 3.8.0</strong> </p>
-<blockquote>
+<h3 id="谈一下遇到的问题和优化思路"><a href="#谈一下遇到的问题和优化思路" class="headerlink" title="谈一下遇到的问题和优化思路"></a><strong>谈一下遇到的问题和优化思路</strong></h3><h3 id="我的hexo版本是-5-4-0-教程中的hexo版本是-3-8-0"><a href="#我的hexo版本是-5-4-0-教程中的hexo版本是-3-8-0" class="headerlink" title="我的hexo版本是 5.4.0 教程中的hexo版本是 3.8.0"></a><strong>我的hexo版本是 5.4.0 教程中的hexo版本是 3.8.0</strong></h3><blockquote>
 <p>虽然版本不一致，但是大多数配置都还能用，仍然可以配置出很多实用的功能。</p>
 </blockquote>
 <p>为了便于保存next配置，我fork了next的源码到了自己的git厂库，修改过的分支地址 <a href="https://github.com/lianglei777/hexo-theme-next/tree/next-leon">next-leon</a>, 这是我在用的配置，读者可以自行对比修改,也可以直接用我的这个主题分支，不过有些信息配置需要自行修改。</p>
 <p>引用方式如下</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"> <span class="string">&quot;hexo-theme-next&quot;</span>: <span class="string">&quot;git+https://github.com/lianglei777/hexo-theme-next.git#next-leon&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>2. 图片资源不展示的问题</strong> </p>
-<p>通过</p>
+<h3 id="图片资源不展示的问题"><a href="#图片资源不展示的问题" class="headerlink" title="图片资源不展示的问题"></a><strong>图片资源不展示的问题</strong></h3><p>通过</p>
 <figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image </span><br></pre></td></tr></table></figure>
 <p>引入的图片库，编译的图片链接前缀带有 /.io/ ,导致图片不显示，具体可看这个<a href="https://github.com/xcodebuild/hexo-asset-image/issues/47">issue</a>。<br>其实最新代码已经修复了这个问题，但是npm平台的上包还是老代码.</p>
 <p>可以改为如下引用</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;hexo-asset-image&quot;</span>: <span class="string">&quot;git+https://github.com/xcodebuild/hexo-asset-image.git&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>3. 生成永久外链的问题</strong></p>
-<blockquote>
+<h3 id="生成永久外链的问题"><a href="#生成永久外链的问题" class="headerlink" title="生成永久外链的问题"></a><strong>生成永久外链的问题</strong></h3><blockquote>
 <p>很多教程推荐使用 hexo-abbrlink，去生成永久外链，但是我尝试了很多次，在hexo 5.4.0 版本中都没有用，生成的连接都包含 undefined，无法使用。</p>
 </blockquote>
 <p>其实最新的hexo版本中，有关于链接的配置。这里给出我的解决方案以及配置。</p>
@@ -80,7 +72,9 @@
 <p><strong>生成的链接就变成了这样</strong></p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">https:<span class="regexp">//</span>lianglei777.github.io<span class="regexp">/post/</span><span class="number">202103300830</span>/</span><br></pre></td></tr></table></figure>
 
-<h3 id="本次补充就到这里"><a href="#本次补充就到这里" class="headerlink" title="本次补充就到这里"></a><strong>本次补充就到这里</strong></h3>]]></content>
+
+
+]]></content>
       <categories>
         <category>Tool</category>
         <category>Hexo</category>
@@ -88,5 +82,10 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>welcome</title>
+    <url>/post/202103280830/</url>
+    <content><![CDATA[<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">Welcome <span class="keyword">to</span> Leon B<span class="keyword">log</span></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>
