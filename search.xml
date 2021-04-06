@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>welcome</title>
+    <url>/post/202103280830/</url>
+    <content><![CDATA[<center></center>
+
+<hr>
+<center><font face="黑体" color="#428bca" size="6">Welcome to Leon Blog</font></center>
+
+<hr>
+ <!-- <table><tr><td bgcolor=#555><center><font face="黑体" color=#FFF size=6 >Welcome to Leon Blog</font></center></td></tr></table> -->
+
+
+
+
+
+
+
+]]></content>
+  </entry>
+  <entry>
     <title>快速搭建 Hexo + next 博客</title>
     <url>/post/202103300830/</url>
     <content><![CDATA[<blockquote>
@@ -53,7 +72,7 @@
 <h3 id="Next库配置管理问题"><a href="#Next库配置管理问题" class="headerlink" title="Next库配置管理问题"></a><strong>Next库配置管理问题</strong></h3><blockquote>
 <p>我的hexo版本是 5.4.0 教程中的hexo版本是 3.8.0,<br>虽然版本不一致，但是大多数配置都还能用，仍然可以配置出很多实用的功能。</p>
 </blockquote>
-<p>为了便于保存next配置，我fork了next的源码到了自己的git厂库，修改过的分支地址 <a href="https://github.com/lianglei777/hexo-theme-next/tree/next-leon">next-leon</a>, 这是我在用的配置，读者可以自行对比修改,也可以直接用我的这个主题分支，不过有些信息配置需要自行修改。</p>
+<p>为了便于保存next配置，我fork了next的源码到了自己的git仓库，修改过的分支地址 <a href="https://github.com/lianglei777/hexo-theme-next/tree/next-leon">next-leon</a>, 这是我在用的配置，读者可以自行对比修改,也可以直接用我的这个主题分支，不过有些信息配置需要自行修改。</p>
 <p>引用方式如下</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"> <span class="string">&quot;hexo-theme-next&quot;</span>: <span class="string">&quot;git+https://github.com/lianglei777/hexo-theme-next.git#next-leon&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -84,10 +103,5 @@
       <tags>
         <tag>Hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>welcome</title>
-    <url>/post/202103280830/</url>
-    <content><![CDATA[<figure class="highlight pf"><table><tr><td class="code"><pre><span class="line">Welcome <span class="keyword">to</span> Leon B<span class="keyword">log</span></span><br></pre></td></tr></table></figure>]]></content>
   </entry>
 </search>
