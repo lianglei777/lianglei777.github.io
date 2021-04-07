@@ -59,7 +59,7 @@
 
 <p>再次执行 Hexo server,界面变为如下</p>
 <p><img src="/post/202103300830/202103312227.png" alt="图片"></p>
-<p>next 主题配置项比较多，这里给出我的 <a href="https://github.com/lianglei777/FileResource/blob/master/Next-_config.yml">配置文件</a>，可以直接替换（ps: 我目前也在摸索中，配置不完整,以后属性了再补充）</p>
+<p>next 主题配置项比较多，这里给出我的 <a href="https://github.com/lianglei777/hexo-theme-next/blob/next-leon/_config.yml">配置文件</a>（ps: 建议继续往下看，后面还有补充）</p>
 <p>界面变化为如下<br><img src="/post/202103300830/202103312239.png" alt="图片"></p>
 <h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>Hexo整体的搭建过程其实并不复杂，但是 hexo 和 next 的配置项太多了，我这里也只配置了部分设置，有些想自定义的地方的配置暂时还没找到==！,一个好看易用的博客还需要之后慢慢打磨。</p>
 <hr>
@@ -93,8 +93,29 @@
 <p><strong>生成的链接就变成了这样</strong></p>
 <figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">https:<span class="regexp">//</span>lianglei777.github.io<span class="regexp">/post/</span><span class="number">202103300830</span>/</span><br></pre></td></tr></table></figure>
 
+<hr>
+<p><strong>Tip: 2021.4.7 做了补充</strong></p>
+<p><strong>考虑到一些细节配置没有细说，这里给出一些说明</strong></p>
+<h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a><strong>安装环境</strong></h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo</span>: <span class="number">5</span>.<span class="number">4</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">hexo</span>-cli: <span class="number">4</span>.<span class="number">2</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">NexT</span>: <span class="number">8</span>.<span class="number">3</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">OS</span>: macOS <span class="number">10</span>.<span class="number">15</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure>
 
+<h3 id="个性化样式功能"><a href="#个性化样式功能" class="headerlink" title="个性化样式功能"></a><strong>个性化样式功能</strong></h3><ul>
+<li>文章的置顶功能 （参见首页的置顶）</li>
+<li>顶部的阅读进度条 （参见顶部的蓝色进度条）</li>
+<li>markdown语法的链接颜色自定义 (参见本文的链接样式)</li>
+<li>文章的结束标志 (参见文末的 “本文结束  感谢阅读” 样式)</li>
+<li>其他的一些样式就是Next主题自带的样式配置</li>
+</ul>
+<p><em><strong>后面有时间会把详细修改过程补上</strong></em></p>
+<h3 id="傻瓜式用法"><a href="#傻瓜式用法" class="headerlink" title="傻瓜式用法"></a><strong>傻瓜式用法</strong></h3><p><strong>第一步</strong></p>
+<p>用下面的package.json配置替换自己博客的package.json</p>
+<p><strong>package.json配置文件:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;hexo-site&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;hexo generate&quot;</span>,</span><br><span class="line">    <span class="string">&quot;clean&quot;</span>: <span class="string">&quot;hexo clean&quot;</span>,</span><br><span class="line">    <span class="string">&quot;deploy&quot;</span>: <span class="string">&quot;hexo deploy&quot;</span>,</span><br><span class="line">    <span class="string">&quot;server&quot;</span>: <span class="string">&quot;hexo server&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;hexo&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;5.4.0&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;hexo&quot;</span>: <span class="string">&quot;5.4.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-asset-image&quot;</span>: <span class="string">&quot;git+https://github.com/xcodebuild/hexo-asset-image.git&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-autonofollow&quot;</span>: <span class="string">&quot;1.0.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-deployer-git&quot;</span>: <span class="string">&quot;3.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-index-pin-top&quot;</span>: <span class="string">&quot;0.2.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-searchdb&quot;</span>: <span class="string">&quot;1.3.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;4.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-server&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-symbols-count-time&quot;</span>: <span class="string">&quot;0.7.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-theme-landscape&quot;</span>: <span class="string">&quot;0.0.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-theme-next&quot;</span>: <span class="string">&quot;git+https://github.com/lianglei777/hexo-theme-next.git#next-leon&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><strong>第二步</strong></p>
+<p>执行</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+
+<p>其它的hexo自带功能，可以自行配置</p>
 ]]></content>
       <categories>
         <category>Tool</category>
