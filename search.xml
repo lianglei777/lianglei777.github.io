@@ -20,69 +20,109 @@
 ]]></content>
   </entry>
   <entry>
-    <title>新工作用到的东西</title>
-    <url>/post/202105192041/</url>
-    <content><![CDATA[<h3 id="新工作用到的新东西记录一下"><a href="#新工作用到的新东西记录一下" class="headerlink" title="新工作用到的新东西记录一下"></a>新工作用到的新东西记录一下</h3><blockquote>
-<p>换了工作，项目中用到了之前了解过或者没听过的东西，这里记录一下，边学边填。<br>包括lerna、redux-saga，Immutable.js、video-react、re-resizable、以及一些基础的html相关的api</p>
-</blockquote>
-<span id="more"></span>]]></content>
-      <categories>
-        <category>Study</category>
-        <category>Work</category>
-      </categories>
-      <tags>
-        <tag>React</tag>
-        <tag>Work</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>离开苏州到合肥工作</title>
-    <url>/post/202105060952/</url>
-    <content><![CDATA[<h3 id="2021-5-从苏州到合肥的记录"><a href="#2021-5-从苏州到合肥的记录" class="headerlink" title="2021.5 从苏州到合肥的记录"></a><strong>2021.5 从苏州到合肥的记录</strong></h3><blockquote>
-<p>离开苏州到合肥工作，主要记录一下搬家前后的大致经历</p>
+    <title>快速搭建 Hexo + next 博客</title>
+    <url>/post/202103300830/</url>
+    <content><![CDATA[<blockquote>
+<p>第一次搭建博客，使用的是hexo，第一篇献给 <a href="https://hexo.io/zh-cn/docs/">Hexo</a></p>
 </blockquote>
 <span id="more"></span>
 
-<h3 id="社保-amp-公积金"><a href="#社保-amp-公积金" class="headerlink" title="社保 &amp; 公积金"></a><strong>社保 &amp; 公积金</strong></h3><p><strong>社保</strong></p>
-<p>医保可以去药店刷些补品、维生素、钙片之类的。网上查询苏州养老保险应该是可以转移到合肥的，具体还没有操作。其他的基本就带不走也花不掉了</p>
-<p><strong>公积金</strong></p>
-<p>苏州公积金是可提取的，但是要封存六个月，具体都可以在苏州公积金app上操作，网上查询也是可以转移到合肥的，具体还没有操作。</p>
-<h3 id="简单的告别"><a href="#简单的告别" class="headerlink" title="简单的告别"></a><strong>简单的告别</strong></h3><p>在苏州工作生活了五年有余，很多过往都和苏州产生了联系，决定离开的时候自己心理上做好了准备，在合适的时间提了离职申请，然后告诉同事和朋友，我要离开苏州了。相约一个大家都有空的时间一起吃个饭，聊聊天。</p>
-<h3 id="工作的交接"><a href="#工作的交接" class="headerlink" title="工作的交接"></a><strong>工作的交接</strong></h3><p>离职申请批准之后，主要就是准备工作的交接，因为距离离职日期还有一段时间，所以一边做开发任务，一边交接，写交接文档。逐渐将手上的jira任务、问题处理掉。离职前一周还是做了一个重要的功能需求，办理离职手续的上午配合测试将功能测试通过（给自己点赞👍）。走的时候工作各方面处理的也算圆满。</p>
-<h3 id="租房"><a href="#租房" class="headerlink" title="租房"></a><strong>租房</strong></h3><p>先说几个角色</p>
-<p><strong>租客</strong>：我</p>
-<p><strong>中介机构</strong>：一般就是卖房机构，也做租房业务</p>
-<p><strong>中介人员</strong>：属于中介机构的工作人员，主要就是负责租客带看、沟通等</p>
-<p><strong>二房东</strong>：从业主那里整租一套房（一般五年左右），对房间进行改造隔间装修，例如将客厅隔成一间次卧，然后进行出租获利行为的人员机构。</p>
-<p>在离职前两周就在豆瓣的合肥租房小组发了求租的帖子，但是反响平平。于是我专门从苏州到合肥租房子，期间住旅馆。这里说着重说一下租房经历。</p>
-<ol>
-<li>租房之前，以公司为圆心，以上班距离为半径 (ps:我是4km计算的) 确认一下租房范围，周围有哪些小区。</li>
-<li>到了合肥，因为是傍晚到的，晚上比较空闲，这边共享电瓶车很方便，我就骑电瓶车在之前确认的租房范围转一转，主要就是看看小区周围的交通、饮食、购物等条件，缩小筛选范围。</li>
-<li>第二天上午开始租房，我本意是想直接和房东租房，主要是想省去中介费，但是通过租房软件、和小区内告示几乎联系不上房东，<strong>高新区的租房基本都被中介机构和二房东垄断了</strong>，耗去了上午的时间。下午开始联系租房软件上的二房东租房公司、中介，多打了几个电话，大致了解了这边中介的租房价位。</li>
-<li>联系中介实地看房子，主要就是看价格和租房是否匹配，不要怕麻烦，多看几家，<ul>
-<li>问清楚支付方式，例如押一付一、押一付三。</li>
-<li>水电怎么计费，例如是否是商用水电、是自己网上缴费还是租房公司统一收费。</li>
-<li>看小区新旧，房间的生活设施是否齐全例如热水器、空调、洗衣机、煤气等等。</li>
+<p>如何搭建 <a href="https://nodejs.org/zh-cn/">Node</a> 环境这里就不赘述了，下面开始搭建流程</p>
+<h3 id="全局安装Hexo"><a href="#全局安装Hexo" class="headerlink" title="全局安装Hexo"></a><strong>全局安装Hexo</strong></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="创建项目-amp-安装依赖"><a href="#创建项目-amp-安装依赖" class="headerlink" title="创建项目 &amp; 安装依赖"></a><strong>创建项目 &amp; 安装依赖</strong></h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> hexo init Blog</span><br><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> Blog</span><br><span class="line"><span class="variable">$</span> npm install</span><br></pre></td></tr></table></figure>
+
+<p>运行命令</p>
+<figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
+
+
+<p>在浏览器中打开 <a href="http://localhost:4000/">http://localhost:4000</a> ，就可以看到初始项目模板界面<br><img src="/post/202103300830/202103312050.png" alt="图片"></p>
+<h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a><strong>打包</strong></h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
+<p>资源会被包到 Blog/public 文件夹下</p>
+<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a><strong>发布</strong></h3><p>Hexo支持多种发布方式，我使用 <a href="https://hexo.io/zh-cn/docs/github-pages">github-pages</a> 的方式</p>
+<p>这里说一下我的个人思路<br>我在自己的 <a href="https://github.com/lianglei777">github</a> 上创建了三个repo，分别为命名FileResource、lianglei777.github.io、Blog</p>
+<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">FileResource : 用于存放图片、文件等资源文件, 通过链接的形式在博客文章中引用</span><br><span class="line">lianglei777<span class="selector-class">.github</span><span class="selector-class">.io</span> : 打包后的发布repo，命名格式必须是 &lt;你的 GitHub 用户名&gt;<span class="selector-class">.github</span>.io</span><br><span class="line">Blog : 博客项目源代码repo，我设置成的了 私有，只有自己可以查看</span><br></pre></td></tr></table></figure>
+
+<p>这样可以让 <u>代码开发</u> 和 <u>发布模块</u> 分离，容易管理，资源使用链接形式，可以加快打包速度,不过网络差的情况下图片可能不展示，而且github在国内的访问速度可能不太好，也可以选择其他图床，感兴趣的可以自行研究。</p>
+<p>修改项目路径下配置文件字段 Blog/_config.yml</p>
+<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repository:</span> https:<span class="comment">//github.com/lianglei777/lianglei777.github.io.git</span></span><br><span class="line"><span class="symbol">  branch:</span> main</span><br></pre></td></tr></table></figure>
+<p>repository 字段为 &lt;你的 GitHub 用户名&gt;.github.io 的git地址。</p>
+<p>发布命令:</p>
+<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo deploy</span><br></pre></td></tr></table></figure>
+<p>浏览器访问 “ &lt;你的 GitHub 用户名&gt;.github.io “ 就可以查看。</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a><strong>安装主题</strong></h3><p>Hexo 支持很多第三方 <a href="https://hexo.io/themes/">主题</a>，我使用的是开源主题 <a href="https://theme-next.js.org/">Next</a></p>
+<p>根目录下执行</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
+
+<p>修改路径下文件中配置字段 Blog/_config.yml</p>
+<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"><span class="symbol">theme:</span> <span class="keyword">next</span></span><br></pre></td></tr></table></figure>
+
+<p>再次执行 Hexo server,界面变为如下</p>
+<p><img src="/post/202103300830/202103312227.png" alt="图片"></p>
+<p>next 主题配置项比较多，这里给出我的 <a href="https://github.com/lianglei777/hexo-theme-next/blob/next-leon/_config.yml">配置文件</a>（ps: 建议继续往下看，后面还有补充）</p>
+<p>界面变化为如下<br><img src="/post/202103300830/202103312239.png" alt="图片"></p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>Hexo整体的搭建过程其实并不复杂，但是 hexo 和 next 的配置项太多了，我这里也只配置了部分设置，有些想自定义的地方的配置暂时还没找到==！,一个好看易用的博客还需要之后慢慢打磨。</p>
+<hr>
+<p><strong>Tip: 2021.4.3 做了补充</strong></p>
+<p><strong>找到了一个很好的教程，跟着教程对我的博客进行了全面的优化</strong></p>
+<blockquote>
+<p>教程链接：<a href="https://wylu.me/tags/Hexo/">wylu</a></p>
+</blockquote>
+<p><strong>谈一下遇到的问题和优化思路</strong></p>
+<h3 id="Next库配置管理问题"><a href="#Next库配置管理问题" class="headerlink" title="Next库配置管理问题"></a><strong>Next库配置管理问题</strong></h3><blockquote>
+<p>我的hexo版本是 5.4.0 教程中的hexo版本是 3.8.0,<br>虽然版本不一致，但是大多数配置都还能用，仍然可以配置出很多实用的功能。</p>
+</blockquote>
+<p>为了便于保存next配置，我fork了next的源码到了自己的git仓库，修改过的分支地址 <a href="https://github.com/lianglei777/hexo-theme-next/tree/next-leon">next-leon</a>, 这是我在用的配置，读者可以自行对比修改,也可以直接用我的这个主题分支，不过有些信息配置需要自行修改。</p>
+<p>引用方式如下</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"> <span class="string">&quot;hexo-theme-next&quot;</span>: <span class="string">&quot;git+https://github.com/lianglei777/hexo-theme-next.git#next-leon&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="图片资源不展示的问题"><a href="#图片资源不展示的问题" class="headerlink" title="图片资源不展示的问题"></a><strong>图片资源不展示的问题</strong></h3><p>通过</p>
+<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image </span><br></pre></td></tr></table></figure>
+<p>引入的图片库，编译的图片链接前缀带有 /.io/ ,导致图片不显示，具体可看这个<a href="https://github.com/xcodebuild/hexo-asset-image/issues/47">issue</a>。<br>其实最新代码已经修复了这个问题，但是npm平台的上包还是老代码.</p>
+<p>可以改为如下引用</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;hexo-asset-image&quot;</span>: <span class="string">&quot;git+https://github.com/xcodebuild/hexo-asset-image.git&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="生成永久外链的问题"><a href="#生成永久外链的问题" class="headerlink" title="生成永久外链的问题"></a><strong>生成永久外链的问题</strong></h3><blockquote>
+<p>很多教程推荐使用 hexo-abbrlink，去生成永久外链，但是我尝试了很多次，在hexo 5.4.0 版本中都没有用，生成的连接都包含 undefined，无法使用。</p>
+</blockquote>
+<p>其实最新的hexo版本中，有关于链接的配置。这里给出我的解决方案以及配置。</p>
+<p><strong>Hexo 配置文件 _config.yml，修改permalink字段</strong></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 此处使用id作为链接唯一标识，id规则: 当前时间精确到分,例如：202104010203</span><br><span class="line">permalink: post&#x2F;:id&#x2F;</span><br></pre></td></tr></table></figure>
+<p><strong>同时博客文章md文件顶部需要添加 id 如下:</strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">_posts</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">快速搭建</span> <span class="string">Hexo</span> <span class="string">+</span> <span class="string">next</span> <span class="string">博客</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2021-04-01 21:39:38</span></span><br><span class="line"><span class="attr">id:</span> <span class="number">202103300830</span> <span class="comment"># &lt;--- 像这样，不同文章id必须不一样</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">Hexo</span>]</span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> [<span class="string">Tool</span>, <span class="string">Hexo</span>]</span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+<p><strong>生成的链接就变成了这样</strong></p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">https:<span class="regexp">//</span>lianglei777.github.io<span class="regexp">/post/</span><span class="number">202103300830</span>/</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p><strong>Tip: 2021.4.7 做了补充</strong></p>
+<p><strong>考虑到一些细节配置没有细说，这里给出一些说明</strong></p>
+<h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a><strong>安装环境</strong></h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo</span>: <span class="number">5</span>.<span class="number">4</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">hexo</span>-cli: <span class="number">4</span>.<span class="number">2</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">NexT</span>: <span class="number">8</span>.<span class="number">3</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">OS</span>: macOS <span class="number">10</span>.<span class="number">15</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="个性化样式功能"><a href="#个性化样式功能" class="headerlink" title="个性化样式功能"></a><strong>个性化样式功能</strong></h3><ul>
+<li>文章的置顶功能 （参见首页的置顶）</li>
+<li>顶部的阅读进度条 （参见顶部的蓝色进度条）</li>
+<li>markdown语法的链接颜色自定义 (参见本文的链接样式)</li>
+<li>文章的结束标志 (参见文末的 “本文结束  感谢阅读” 样式)</li>
+<li>其他的一些样式就是Next主题自带的样式配置</li>
 </ul>
-</li>
-</ol>
-<p>看了一下午，已经有两间中意的房子，和中介说第二天给答复。晚上的时候中介推荐给我了一间价格比较低但是条件很好的房间，我不太相信，但是中介信誓旦旦，相约了第三天早上去看一下。第三天看了，我和中介人员确认价格没说错吧，中介确定，我决定要租，让中介机构约二房东签合同，这时候翻转来了，中介机构联系二房东的时候反馈说之前价格说错了，价格少说三百块，我思量了一下，还是可以租，然后又翻转了，之前确认还是错的，少说了五十块，然后我就生气了，开始怼中介，让他们去谈价格，我和中介任意又去另外一个地方看了一处出租房。因为还有其他事情，晚上要回苏州，思考了一下，还是准备租翻转价格的那间房。价格说下去二十块，中介费我砍去一半，押一付三。</p>
-<p>这个大致就是我的租房过程，说的尽量简洁了，过程比较痛苦（那两天天气热，刮大风，导致眼睛和喉咙都不舒服），回想起来比较有趣的就是租客、中介、中介机构、二房东之间关系利益的博弈（这个词可能不太恰当），难听一点就是扯皮，就不详细解释了。总体来说租房还算满意，吃点小亏。</p>
-<p><strong>给大家的租房建议就是，先看自己租房预算。朋友一起合租就尽量找房东或者中介租整套房的，再均摊，会实惠一些。个人的话怕麻烦，就直接找中介或者直接找二房东吧，多花点钱，房间价位选择也多。多和中介、房东问些信息，少踩坑。签租房合同的时候，看仔细点，条款是否都同意，也不要少写了，不满意的点要改，不要不好意思。</strong></p>
-<h3 id="搬家"><a href="#搬家" class="headerlink" title="搬家"></a><strong>搬家</strong></h3><p>先把自己的东西整理一下，需要带走的带走，有价值的舍不得扔的就送人或者咸鱼打折卖掉，该丢的就丢掉，自己酌情处理。</p>
-<p>我是先在网上买了纸箱子（快递小哥也有）、压缩袋。整理的时候一定要做好分类，例如衣服可以按季节分、被子按薄厚分、杂物可以直接放一个纸盒子里，不好打包的可以让快递小哥帮忙打包。其实说起来挺简单，但是整理起来很花时间…</p>
-<p>分类打包好放纸箱子里，预约快递小哥上门取件，急着要用的东西走顺丰，比如被子（不然到新住处没法睡觉😂），不着急的走圆通等（价格会低一些），日常用的衣服牙刷等可以放箱子里自己带走。</p>
-<p>联系苏州的房东，退房清算、退押金。联系苏州的合租舍友，分摊苏州租房费用。</p>
-<p>然后晚上离开苏州，虽然之前做好了心理准备，但是直到走的那一刻，脑海中还是思绪万千，画面翻滚，甚至热泪盈眶…</p>
-<h3 id="住在合肥"><a href="#住在合肥" class="headerlink" title="住在合肥"></a><strong>住在合肥</strong></h3><p>当天晚上租了一晚旅店，第二天被子还没到，只能买床被子开空调在出租屋先顶一晚（其实顶了两晚😳, 五一旅馆价格太高了！！QAQ），期间主要就是打扫房间，买日常用到的各种生活用品。为了方便上下班，还在考虑买一辆电瓶车。</p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>一个人跨城市搬家是一件很累很繁琐的事情，需要各种沟通协调，会有很多额外的必要支出，前后花费了一周的时间。但是既然选择了这里，也来到了这里，那就要做好，无论是工作还是生活,就先写到这里吧。</p>
+<p><em><strong>后面有时间会把详细修改过程补上</strong></em></p>
+<h3 id="傻瓜式用法"><a href="#傻瓜式用法" class="headerlink" title="傻瓜式用法"></a><strong>傻瓜式用法</strong></h3><p><strong>第一步</strong></p>
+<p>用下面的package.json配置替换自己博客的package.json</p>
+<p><strong>package.json配置文件:</strong></p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;hexo-site&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;hexo generate&quot;</span>,</span><br><span class="line">    <span class="string">&quot;clean&quot;</span>: <span class="string">&quot;hexo clean&quot;</span>,</span><br><span class="line">    <span class="string">&quot;deploy&quot;</span>: <span class="string">&quot;hexo deploy&quot;</span>,</span><br><span class="line">    <span class="string">&quot;server&quot;</span>: <span class="string">&quot;hexo server&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;hexo&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;5.4.0&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;hexo&quot;</span>: <span class="string">&quot;5.4.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-asset-image&quot;</span>: <span class="string">&quot;git+https://github.com/xcodebuild/hexo-asset-image.git&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-autonofollow&quot;</span>: <span class="string">&quot;1.0.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-deployer-git&quot;</span>: <span class="string">&quot;3.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-index-pin-top&quot;</span>: <span class="string">&quot;0.2.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-searchdb&quot;</span>: <span class="string">&quot;1.3.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;4.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-server&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-symbols-count-time&quot;</span>: <span class="string">&quot;0.7.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-theme-landscape&quot;</span>: <span class="string">&quot;0.0.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-theme-next&quot;</span>: <span class="string">&quot;git+https://github.com/lianglei777/hexo-theme-next.git#next-leon&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>第二步</strong></p>
+<p>执行</p>
+<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
+
+<p>其它的hexo自带功能，可以自行配置</p>
 ]]></content>
       <categories>
-        <category>Life</category>
-        <category>合肥</category>
+        <category>Tool</category>
+        <category>Hexo</category>
       </categories>
       <tags>
-        <tag>搬家</tag>
+        <tag>Hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -203,109 +243,94 @@
       </tags>
   </entry>
   <entry>
-    <title>快速搭建 Hexo + next 博客</title>
-    <url>/post/202103300830/</url>
-    <content><![CDATA[<blockquote>
-<p>第一次搭建博客，使用的是hexo，第一篇献给 <a href="https://hexo.io/zh-cn/docs/">Hexo</a></p>
+    <title>离开苏州到合肥工作</title>
+    <url>/post/202105060952/</url>
+    <content><![CDATA[<h3 id="2021-5-从苏州到合肥的记录"><a href="#2021-5-从苏州到合肥的记录" class="headerlink" title="2021.5 从苏州到合肥的记录"></a><strong>2021.5 从苏州到合肥的记录</strong></h3><blockquote>
+<p>离开苏州到合肥工作，主要记录一下搬家前后的大致经历</p>
 </blockquote>
 <span id="more"></span>
 
-<p>如何搭建 <a href="https://nodejs.org/zh-cn/">Node</a> 环境这里就不赘述了，下面开始搭建流程</p>
-<h3 id="全局安装Hexo"><a href="#全局安装Hexo" class="headerlink" title="全局安装Hexo"></a><strong>全局安装Hexo</strong></h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建项目-amp-安装依赖"><a href="#创建项目-amp-安装依赖" class="headerlink" title="创建项目 &amp; 安装依赖"></a><strong>创建项目 &amp; 安装依赖</strong></h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$</span> hexo init Blog</span><br><span class="line"><span class="variable">$</span> <span class="built_in">cd</span> Blog</span><br><span class="line"><span class="variable">$</span> npm install</span><br></pre></td></tr></table></figure>
-
-<p>运行命令</p>
-<figure class="highlight axapta"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">server</span></span><br></pre></td></tr></table></figure>
-
-
-<p>在浏览器中打开 <a href="http://localhost:4000/">http://localhost:4000</a> ，就可以看到初始项目模板界面<br><img src="/post/202103300830/202103312050.png" alt="图片"></p>
-<h3 id="打包"><a href="#打包" class="headerlink" title="打包"></a><strong>打包</strong></h3><figure class="highlight verilog"><table><tr><td class="code"><pre><span class="line">$ hexo <span class="keyword">generate</span></span><br></pre></td></tr></table></figure>
-<p>资源会被包到 Blog/public 文件夹下</p>
-<h3 id="发布"><a href="#发布" class="headerlink" title="发布"></a><strong>发布</strong></h3><p>Hexo支持多种发布方式，我使用 <a href="https://hexo.io/zh-cn/docs/github-pages">github-pages</a> 的方式</p>
-<p>这里说一下我的个人思路<br>我在自己的 <a href="https://github.com/lianglei777">github</a> 上创建了三个repo，分别为命名FileResource、lianglei777.github.io、Blog</p>
-<figure class="highlight stylus"><table><tr><td class="code"><pre><span class="line">FileResource : 用于存放图片、文件等资源文件, 通过链接的形式在博客文章中引用</span><br><span class="line">lianglei777<span class="selector-class">.github</span><span class="selector-class">.io</span> : 打包后的发布repo，命名格式必须是 &lt;你的 GitHub 用户名&gt;<span class="selector-class">.github</span>.io</span><br><span class="line">Blog : 博客项目源代码repo，我设置成的了 私有，只有自己可以查看</span><br></pre></td></tr></table></figure>
-
-<p>这样可以让 <u>代码开发</u> 和 <u>发布模块</u> 分离，容易管理，资源使用链接形式，可以加快打包速度,不过网络差的情况下图片可能不展示，而且github在国内的访问速度可能不太好，也可以选择其他图床，感兴趣的可以自行研究。</p>
-<p>修改项目路径下配置文件字段 Blog/_config.yml</p>
-<figure class="highlight dts"><table><tr><td class="code"><pre><span class="line"><span class="symbol">deploy:</span></span><br><span class="line"><span class="symbol">  type:</span> git</span><br><span class="line"><span class="symbol">  repository:</span> https:<span class="comment">//github.com/lianglei777/lianglei777.github.io.git</span></span><br><span class="line"><span class="symbol">  branch:</span> main</span><br></pre></td></tr></table></figure>
-<p>repository 字段为 &lt;你的 GitHub 用户名&gt;.github.io 的git地址。</p>
-<p>发布命令:</p>
-<figure class="highlight elixir"><table><tr><td class="code"><pre><span class="line"><span class="variable">$ </span>hexo deploy</span><br></pre></td></tr></table></figure>
-<p>浏览器访问 “ &lt;你的 GitHub 用户名&gt;.github.io “ 就可以查看。</p>
-<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a><strong>安装主题</strong></h3><p>Hexo 支持很多第三方 <a href="https://hexo.io/themes/">主题</a>，我使用的是开源主题 <a href="https://theme-next.js.org/">Next</a></p>
-<p>根目录下执行</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-theme-next</span><br></pre></td></tr></table></figure>
-
-<p>修改路径下文件中配置字段 Blog/_config.yml</p>
-<figure class="highlight vbnet"><table><tr><td class="code"><pre><span class="line"><span class="symbol">theme:</span> <span class="keyword">next</span></span><br></pre></td></tr></table></figure>
-
-<p>再次执行 Hexo server,界面变为如下</p>
-<p><img src="/post/202103300830/202103312227.png" alt="图片"></p>
-<p>next 主题配置项比较多，这里给出我的 <a href="https://github.com/lianglei777/hexo-theme-next/blob/next-leon/_config.yml">配置文件</a>（ps: 建议继续往下看，后面还有补充）</p>
-<p>界面变化为如下<br><img src="/post/202103300830/202103312239.png" alt="图片"></p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>Hexo整体的搭建过程其实并不复杂，但是 hexo 和 next 的配置项太多了，我这里也只配置了部分设置，有些想自定义的地方的配置暂时还没找到==！,一个好看易用的博客还需要之后慢慢打磨。</p>
-<hr>
-<p><strong>Tip: 2021.4.3 做了补充</strong></p>
-<p><strong>找到了一个很好的教程，跟着教程对我的博客进行了全面的优化</strong></p>
-<blockquote>
-<p>教程链接：<a href="https://wylu.me/tags/Hexo/">wylu</a></p>
-</blockquote>
-<p><strong>谈一下遇到的问题和优化思路</strong></p>
-<h3 id="Next库配置管理问题"><a href="#Next库配置管理问题" class="headerlink" title="Next库配置管理问题"></a><strong>Next库配置管理问题</strong></h3><blockquote>
-<p>我的hexo版本是 5.4.0 教程中的hexo版本是 3.8.0,<br>虽然版本不一致，但是大多数配置都还能用，仍然可以配置出很多实用的功能。</p>
-</blockquote>
-<p>为了便于保存next配置，我fork了next的源码到了自己的git仓库，修改过的分支地址 <a href="https://github.com/lianglei777/hexo-theme-next/tree/next-leon">next-leon</a>, 这是我在用的配置，读者可以自行对比修改,也可以直接用我的这个主题分支，不过有些信息配置需要自行修改。</p>
-<p>引用方式如下</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"> <span class="string">&quot;hexo-theme-next&quot;</span>: <span class="string">&quot;git+https://github.com/lianglei777/hexo-theme-next.git#next-leon&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="图片资源不展示的问题"><a href="#图片资源不展示的问题" class="headerlink" title="图片资源不展示的问题"></a><strong>图片资源不展示的问题</strong></h3><p>通过</p>
-<figure class="highlight arduino"><table><tr><td class="code"><pre><span class="line">npm install hexo-asset-image </span><br></pre></td></tr></table></figure>
-<p>引入的图片库，编译的图片链接前缀带有 /.io/ ,导致图片不显示，具体可看这个<a href="https://github.com/xcodebuild/hexo-asset-image/issues/47">issue</a>。<br>其实最新代码已经修复了这个问题，但是npm平台的上包还是老代码.</p>
-<p>可以改为如下引用</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="string">&quot;hexo-asset-image&quot;</span>: <span class="string">&quot;git+https://github.com/xcodebuild/hexo-asset-image.git&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="生成永久外链的问题"><a href="#生成永久外链的问题" class="headerlink" title="生成永久外链的问题"></a><strong>生成永久外链的问题</strong></h3><blockquote>
-<p>很多教程推荐使用 hexo-abbrlink，去生成永久外链，但是我尝试了很多次，在hexo 5.4.0 版本中都没有用，生成的连接都包含 undefined，无法使用。</p>
-</blockquote>
-<p>其实最新的hexo版本中，有关于链接的配置。这里给出我的解决方案以及配置。</p>
-<p><strong>Hexo 配置文件 _config.yml，修改permalink字段</strong></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 此处使用id作为链接唯一标识，id规则: 当前时间精确到分,例如：202104010203</span><br><span class="line">permalink: post&#x2F;:id&#x2F;</span><br></pre></td></tr></table></figure>
-<p><strong>同时博客文章md文件顶部需要添加 id 如下:</strong></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">_posts</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">快速搭建</span> <span class="string">Hexo</span> <span class="string">+</span> <span class="string">next</span> <span class="string">博客</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2021-04-01 21:39:38</span></span><br><span class="line"><span class="attr">id:</span> <span class="number">202103300830</span> <span class="comment"># &lt;--- 像这样，不同文章id必须不一样</span></span><br><span class="line"><span class="attr">tags:</span> [<span class="string">Hexo</span>]</span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="bullet">-</span> [<span class="string">Tool</span>, <span class="string">Hexo</span>]</span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
-<p><strong>生成的链接就变成了这样</strong></p>
-<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">https:<span class="regexp">//</span>lianglei777.github.io<span class="regexp">/post/</span><span class="number">202103300830</span>/</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p><strong>Tip: 2021.4.7 做了补充</strong></p>
-<p><strong>考虑到一些细节配置没有细说，这里给出一些说明</strong></p>
-<h3 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a><strong>安装环境</strong></h3><figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo</span>: <span class="number">5</span>.<span class="number">4</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">hexo</span>-cli: <span class="number">4</span>.<span class="number">2</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">NexT</span>: <span class="number">8</span>.<span class="number">3</span>.<span class="number">0</span></span><br><span class="line"><span class="attribute">OS</span>: macOS <span class="number">10</span>.<span class="number">15</span>.<span class="number">5</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="个性化样式功能"><a href="#个性化样式功能" class="headerlink" title="个性化样式功能"></a><strong>个性化样式功能</strong></h3><ul>
-<li>文章的置顶功能 （参见首页的置顶）</li>
-<li>顶部的阅读进度条 （参见顶部的蓝色进度条）</li>
-<li>markdown语法的链接颜色自定义 (参见本文的链接样式)</li>
-<li>文章的结束标志 (参见文末的 “本文结束  感谢阅读” 样式)</li>
-<li>其他的一些样式就是Next主题自带的样式配置</li>
+<h3 id="社保-amp-公积金"><a href="#社保-amp-公积金" class="headerlink" title="社保 &amp; 公积金"></a><strong>社保 &amp; 公积金</strong></h3><p><strong>社保</strong></p>
+<p>医保可以去药店刷些补品、维生素、钙片之类的。网上查询苏州养老保险应该是可以转移到合肥的，具体还没有操作。其他的基本就带不走也花不掉了</p>
+<p><strong>公积金</strong></p>
+<p>苏州公积金是可提取的，但是要封存六个月，具体都可以在苏州公积金app上操作，网上查询也是可以转移到合肥的，具体还没有操作。</p>
+<h3 id="简单的告别"><a href="#简单的告别" class="headerlink" title="简单的告别"></a><strong>简单的告别</strong></h3><p>在苏州工作生活了五年有余，很多过往都和苏州产生了联系，决定离开的时候自己心理上做好了准备，在合适的时间提了离职申请，然后告诉同事和朋友，我要离开苏州了。相约一个大家都有空的时间一起吃个饭，聊聊天。</p>
+<h3 id="工作的交接"><a href="#工作的交接" class="headerlink" title="工作的交接"></a><strong>工作的交接</strong></h3><p>离职申请批准之后，主要就是准备工作的交接，因为距离离职日期还有一段时间，所以一边做开发任务，一边交接，写交接文档。逐渐将手上的jira任务、问题处理掉。离职前一周还是做了一个重要的功能需求，办理离职手续的上午配合测试将功能测试通过（给自己点赞👍）。走的时候工作各方面处理的也算圆满。</p>
+<h3 id="租房"><a href="#租房" class="headerlink" title="租房"></a><strong>租房</strong></h3><p>先说几个角色</p>
+<p><strong>租客</strong>：我</p>
+<p><strong>中介机构</strong>：一般就是卖房机构，也做租房业务</p>
+<p><strong>中介人员</strong>：属于中介机构的工作人员，主要就是负责租客带看、沟通等</p>
+<p><strong>二房东</strong>：从业主那里整租一套房（一般五年左右），对房间进行改造隔间装修，例如将客厅隔成一间次卧，然后进行出租获利行为的人员机构。</p>
+<p>在离职前两周就在豆瓣的合肥租房小组发了求租的帖子，但是反响平平。于是我专门从苏州到合肥租房子，期间住旅馆。这里说着重说一下租房经历。</p>
+<ol>
+<li>租房之前，以公司为圆心，以上班距离为半径 (ps:我是4km计算的) 确认一下租房范围，周围有哪些小区。</li>
+<li>到了合肥，因为是傍晚到的，晚上比较空闲，这边共享电瓶车很方便，我就骑电瓶车在之前确认的租房范围转一转，主要就是看看小区周围的交通、饮食、购物等条件，缩小筛选范围。</li>
+<li>第二天上午开始租房，我本意是想直接和房东租房，主要是想省去中介费，但是通过租房软件、和小区内告示几乎联系不上房东，<strong>高新区的租房基本都被中介机构和二房东垄断了</strong>，耗去了上午的时间。下午开始联系租房软件上的二房东租房公司、中介，多打了几个电话，大致了解了这边中介的租房价位。</li>
+<li>联系中介实地看房子，主要就是看价格和租房是否匹配，不要怕麻烦，多看几家，<ul>
+<li>问清楚支付方式，例如押一付一、押一付三。</li>
+<li>水电怎么计费，例如是否是商用水电、是自己网上缴费还是租房公司统一收费。</li>
+<li>看小区新旧，房间的生活设施是否齐全例如热水器、空调、洗衣机、煤气等等。</li>
 </ul>
-<p><em><strong>后面有时间会把详细修改过程补上</strong></em></p>
-<h3 id="傻瓜式用法"><a href="#傻瓜式用法" class="headerlink" title="傻瓜式用法"></a><strong>傻瓜式用法</strong></h3><p><strong>第一步</strong></p>
-<p>用下面的package.json配置替换自己博客的package.json</p>
-<p><strong>package.json配置文件:</strong></p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;hexo-site&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;0.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;scripts&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;build&quot;</span>: <span class="string">&quot;hexo generate&quot;</span>,</span><br><span class="line">    <span class="string">&quot;clean&quot;</span>: <span class="string">&quot;hexo clean&quot;</span>,</span><br><span class="line">    <span class="string">&quot;deploy&quot;</span>: <span class="string">&quot;hexo deploy&quot;</span>,</span><br><span class="line">    <span class="string">&quot;server&quot;</span>: <span class="string">&quot;hexo server&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;hexo&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;version&quot;</span>: <span class="string">&quot;5.4.0&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="string">&quot;dependencies&quot;</span>: &#123;</span><br><span class="line">    <span class="string">&quot;hexo&quot;</span>: <span class="string">&quot;5.4.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-asset-image&quot;</span>: <span class="string">&quot;git+https://github.com/xcodebuild/hexo-asset-image.git&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-autonofollow&quot;</span>: <span class="string">&quot;1.0.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-deployer-git&quot;</span>: <span class="string">&quot;3.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-archive&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-category&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-index-pin-top&quot;</span>: <span class="string">&quot;0.2.2&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-searchdb&quot;</span>: <span class="string">&quot;1.3.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-generator-tag&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-ejs&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-marked&quot;</span>: <span class="string">&quot;4.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-renderer-stylus&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-server&quot;</span>: <span class="string">&quot;2.0.0&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-symbols-count-time&quot;</span>: <span class="string">&quot;0.7.1&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-theme-landscape&quot;</span>: <span class="string">&quot;0.0.3&quot;</span>,</span><br><span class="line">    <span class="string">&quot;hexo-theme-next&quot;</span>: <span class="string">&quot;git+https://github.com/lianglei777/hexo-theme-next.git#next-leon&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>第二步</strong></p>
-<p>执行</p>
-<figure class="highlight cmake"><table><tr><td class="code"><pre><span class="line">npm <span class="keyword">install</span></span><br></pre></td></tr></table></figure>
-
-<p>其它的hexo自带功能，可以自行配置</p>
+</li>
+</ol>
+<p>看了一下午，已经有两间中意的房子，和中介说第二天给答复。晚上的时候中介推荐给我了一间价格比较低但是条件很好的房间，我不太相信，但是中介信誓旦旦，相约了第三天早上去看一下。第三天看了，我和中介人员确认价格没说错吧，中介确定，我决定要租，让中介机构约二房东签合同，这时候翻转来了，中介机构联系二房东的时候反馈说之前价格说错了，价格少说三百块，我思量了一下，还是可以租，然后又翻转了，之前确认还是错的，少说了五十块，然后我就生气了，开始怼中介，让他们去谈价格，我和中介任意又去另外一个地方看了一处出租房。因为还有其他事情，晚上要回苏州，思考了一下，还是准备租翻转价格的那间房。价格说下去二十块，中介费我砍去一半，押一付三。</p>
+<p>这个大致就是我的租房过程，说的尽量简洁了，过程比较痛苦（那两天天气热，刮大风，导致眼睛和喉咙都不舒服），回想起来比较有趣的就是租客、中介、中介机构、二房东之间关系利益的博弈（这个词可能不太恰当），难听一点就是扯皮，就不详细解释了。总体来说租房还算满意，吃点小亏。</p>
+<p><strong>给大家的租房建议就是，先看自己租房预算。朋友一起合租就尽量找房东或者中介租整套房的，再均摊，会实惠一些。个人的话怕麻烦，就直接找中介或者直接找二房东吧，多花点钱，房间价位选择也多。多和中介、房东问些信息，少踩坑。签租房合同的时候，看仔细点，条款是否都同意，也不要少写了，不满意的点要改，不要不好意思。</strong></p>
+<h3 id="搬家"><a href="#搬家" class="headerlink" title="搬家"></a><strong>搬家</strong></h3><p>先把自己的东西整理一下，需要带走的带走，有价值的舍不得扔的就送人或者咸鱼打折卖掉，该丢的就丢掉，自己酌情处理。</p>
+<p>我是先在网上买了纸箱子（快递小哥也有）、压缩袋。整理的时候一定要做好分类，例如衣服可以按季节分、被子按薄厚分、杂物可以直接放一个纸盒子里，不好打包的可以让快递小哥帮忙打包。其实说起来挺简单，但是整理起来很花时间…</p>
+<p>分类打包好放纸箱子里，预约快递小哥上门取件，急着要用的东西走顺丰，比如被子（不然到新住处没法睡觉😂），不着急的走圆通等（价格会低一些），日常用的衣服牙刷等可以放箱子里自己带走。</p>
+<p>联系苏州的房东，退房清算、退押金。联系苏州的合租舍友，分摊苏州租房费用。</p>
+<p>然后晚上离开苏州，虽然之前做好了心理准备，但是直到走的那一刻，脑海中还是思绪万千，画面翻滚，甚至热泪盈眶…</p>
+<h3 id="住在合肥"><a href="#住在合肥" class="headerlink" title="住在合肥"></a><strong>住在合肥</strong></h3><p>当天晚上租了一晚旅店，第二天被子还没到，只能买床被子开空调在出租屋先顶一晚（其实顶了两晚😳, 五一旅馆价格太高了！！QAQ），期间主要就是打扫房间，买日常用到的各种生活用品。为了方便上下班，还在考虑买一辆电瓶车。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a><strong>小结</strong></h3><p>一个人跨城市搬家是一件很累很繁琐的事情，需要各种沟通协调，会有很多额外的必要支出，前后花费了一周的时间。但是既然选择了这里，也来到了这里，那就要做好，无论是工作还是生活,就先写到这里吧。</p>
 ]]></content>
       <categories>
-        <category>Tool</category>
-        <category>Hexo</category>
+        <category>Life</category>
+        <category>合肥</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>搬家</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新工作用到的东西</title>
+    <url>/post/202105192041/</url>
+    <content><![CDATA[<h3 id="新工作用到的新东西记录一下"><a href="#新工作用到的新东西记录一下" class="headerlink" title="新工作用到的新东西记录一下"></a>新工作用到的新东西记录一下</h3><blockquote>
+<p>换了工作，项目中用到了之前了解过但是没用过或者没听过的东西，这里记录一下，边学边填。<br>包括lerna、redux-saga，Immutable.js、video-react、re-resizable、Umi， 以及一些基础的html相关的api</p>
+</blockquote>
+<span id="more"></span>
+
+<h4 id="Lerna"><a href="#Lerna" class="headerlink" title="Lerna"></a><strong><a href="https://github.com/lerna/lerna/">Lerna</a></strong></h4><blockquote>
+<p>使用了 git + npm 管理多个前端项目存储库的工具。 vue、babel、react 都在用的 Monorepo 管理方式。</p>
+</blockquote>
+<ul>
+<li><p>多个项目在一个目录下，每个项目都有各自的package.json, 根目录下执行 lerna bootstrap, lerna会将各个子项目的依赖下载，统一放在一个node_modules中（在根目录下）。</p>
+</li>
+<li><p>子项目可以使用一个脚手架。</p>
+</li>
+<li><p>可以单独给某个子项目添加依赖，也可以统一添加相同依赖。还可以将子项目a作为依赖加到子项目b中。</p>
+</li>
+<li><p>生成统一的changelog，统一的版本。</p>
+</li>
+</ul>
+<p>学习链接： <a href="https://juejin.cn/post/6844903918279852046">掘金1</a></p>
+<h4 id="redux、redux-saga"><a href="#redux、redux-saga" class="headerlink" title="redux、redux-saga"></a><strong><a href="https://redux.js.org/">redux</a>、<a href="https://github.com/hmillison/redux-saga">redux-saga</a></strong></h4><blockquote>
+<p>redux: 前端的状态管理库。redux-saga: 在redux中使用异步方法的库</p>
+</blockquote>
+<ul>
+<li><p>之前做RN的项目引入过 redux，使用过一段时间，但是后来觉得写法太繁琐，改用了基于redux封装的另一个状态管理库 <a href="https://github.com/rematch/rematch">rematch</a>, 这个库写法上会简便一些，不用定义 “ action “，个人觉得更好用。后来H5的项目使用了 <a href="https://github.com/mobxjs/mobx">mobx</a>，觉得mbox写法和理解上更易用了,很是喜欢。<strong>当然了简单易用只是一个方面，适合项目才是最好的</strong>，比如redux、rematch写法虽然繁琐，但是在多页面共享”状态”的时候，多交互、多数据源的时候，优势就很大，比如分权限的管理类网站。而mobx在写单页面应用的时候显的更方便易用，，比如手机上的H5应用，之前做过的 考勤类软件：”劳动力管理”，每个模块都是单独的页面功能，功能模块关联性不强。</p>
+</li>
+<li><p>redux-saga: 是目前项目新遇到的，之前没使用过。redux-saga 是一个 redux 中间件，主要是用于redux 的异步操作，使用了 es6的 Generator、yield，写起来没有回调地狱(就是异步嵌套)，目前看来主要用法，就提 redux-saga 提供的 call、put、take、take-every等不同场景的方法。<a href="https://redux-saga-in-chinese.js.org/docs/advanced/index.html">中文文档</a></p>
+</li>
+</ul>
+<h4 id="Immutable-js"><a href="#Immutable-js" class="headerlink" title="Immutable.js"></a><strong><a href="https://github.com/immutable-js/immutable-js">Immutable.js</a></strong></h4>]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Work</category>
+      </categories>
+      <tags>
+        <tag>React</tag>
+        <tag>Work</tag>
       </tags>
   </entry>
 </search>
