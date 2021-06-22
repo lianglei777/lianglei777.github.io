@@ -20,6 +20,44 @@
 ]]></content>
   </entry>
   <entry>
+    <title>react native 中 webview 的使用场景</title>
+    <url>/post/202106222100/</url>
+    <content><![CDATA[<blockquote>
+<p><a href="https://github.com/react-native-webview/react-native-webview">官方</a> 的 webview 组件。<a href="https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md">API文档</a>。这里主要介绍一下使用场景</p>
+</blockquote>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">npm</span> install react-<span class="keyword">native</span>-webview</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h3 id="常规使用"><a href="#常规使用" class="headerlink" title="常规使用"></a><strong>常规使用</strong></h3><p>作为一般的网页入口，传入 uri 链接。这里需要注意 android 环境下的 <strong>mixedContentMode</strong>，此参数允许加载 <strong>http</strong> 链接</p>
+<figure class="highlight handlebars"><table><tr><td class="code"><pre><span class="line"><span class="xml">&lt;WebView</span></span><br><span class="line"><span class="xml">    ref=&#123;ref =&gt; (this.webview = ref)&#125;</span></span><br><span class="line"><span class="xml">    source=</span><span class="template-variable">&#123;&#123; <span class="name">uri:</span> <span class="string">&#x27;https://www.baidu.com/&#x27;</span> &#125;&#125;</span></span><br><span class="line"><span class="xml">    style=</span><span class="template-variable">&#123;&#123; <span class="name">flex:</span> <span class="number">1</span> &#125;&#125;</span></span><br><span class="line"><span class="xml">    mixedContentMode=&quot;compatibility&quot; // Android: WebView 是否应该允许安全链接（https）页面中加载非安全链接（http）的内容,</span></span><br><span class="line"><span class="xml">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="作为登录入口场景"><a href="#作为登录入口场景" class="headerlink" title="作为登录入口场景"></a><strong>作为登录入口场景</strong></h3><blockquote>
+<p>例如：一款 toB 的 app，面对很多家客户，每家客户都有自己的登录系统界面，并且客户要求接入自己的登录系统。</p>
+</blockquote>
+<p>这个时候就需要 webview 接入登录界面之后，进行一些 “值拦截”，进行登录状态判断。这里主要用到 webview 的 <strong>onNavigationStateChange</strong> 参数。她会实时回调网页导航信息的变化，例如下面</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;<span class="attr">&quot;canGoBack&quot;</span>: <span class="literal">false</span>, <span class="attr">&quot;canGoForward&quot;</span>: <span class="literal">false</span>, <span class="attr">&quot;loading&quot;</span>: <span class="literal">true</span>, <span class="attr">&quot;navigationType&quot;</span>: <span class="string">&quot;other&quot;</span>, <span class="attr">&quot;target&quot;</span>: <span class="number">229</span>, <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://www.baidu.com/&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这里主要注意 <strong>url</strong> 字段，网页内部登录完成之后，后端可以发一起一个重定向，前端关注 url 变化，进行登录状态的判断，同时重定向的 url 中可以拼接一些登录信息字段，用于前端登录状态校验等，例如：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123; <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://www.baidu.com ? sessionId=xxx &amp; username= xxx&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="功能模块嵌入"><a href="#功能模块嵌入" class="headerlink" title="功能模块嵌入"></a><strong>功能模块嵌入</strong></h3><p>将 webview 作为功能模块载体，这个时候就会涉及到用户交互，需要 rn 与 h5 进行值的互相传递。此时就要react native 向 web 中注入 js，web 也可以主动回传数据到 react native。</p>
+<p>webview 组件提供了 <strong>injectedJavaScript</strong> 用于向 h5 注入js，在 h5 相关方法中使用 <strong>window.ReactNativeWebView.postMessage</strong> 可见进行主动的回调，并且在 webview 的 <strong>onMessage</strong> 中进行字段的监听，以此就可以完成 react 和 h5 的交互。</p>
+<p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> injectJSStr = <span class="string">`</span></span><br><span class="line"><span class="string">  window.injectStr=&#x27;我是注入的字段&#x27;;</span></span><br><span class="line"><span class="string">  var div = document.getElementById(&#x27;testID&#x27;);</span></span><br><span class="line"><span class="string">  div.style.color=&#x27;red&#x27;;</span></span><br><span class="line"><span class="string">  div.style.fontSize=&#x27;100px&#x27;;</span></span><br><span class="line"><span class="string">  `</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> html = <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">      &lt;script&gt;</span></span><br><span class="line"><span class="string">        setTimeout(function () &#123;</span></span><br><span class="line"><span class="string">          window.ReactNativeWebView.postMessage(window.injectStr)</span></span><br><span class="line"><span class="string">        &#125;, 2000)</span></span><br><span class="line"><span class="string">      &lt;/script&gt;</span></span><br><span class="line"><span class="string">      &lt;div id=&#x27;testID&#x27;&gt;Hello Word&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/body&gt;</span></span><br><span class="line"><span class="string">    &lt;/html&gt;</span></span><br><span class="line"><span class="string">  `</span>;</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">&lt;View style=&#123;&#123;<span class="attr">flex</span>: <span class="number">1</span>&#125;&#125;&gt;</span><br><span class="line">    &lt;WebView</span><br><span class="line">        source=&#123;&#123;html&#125;&#125;</span><br><span class="line">        injectedJavaScript=&#123;injectJSStr&#125;</span><br><span class="line">        onMessage=&#123;<span class="function"><span class="params">event</span> =&gt;</span> &#123;</span><br><span class="line">        alert(event.nativeEvent.data);</span><br><span class="line">        &#125;&#125;</span><br><span class="line">    /&gt;</span><br><span class="line">&lt;/View&gt;</span><br></pre></td></tr></table></figure>
+<p>demo 中，webview 使用的是硬编码的 html，通过 <strong>injectedJavaScript</strong>主动注入 了一段<strong>字符串</strong>类型的js代码，并且 html 中主动回传注入的字段，使用 onMessage 来监听回传内容。</p>
+<p>注：一般我进行 js 注入的时候，都会将参数或者方法挂载在<strong>window</strong>对象上。如果 h5 想暴露一些方法给 RN 以注入 js 的方式调用，也可以挂载在 window 上。</p>
+<h3 id="其他场景"><a href="#其他场景" class="headerlink" title="其他场景"></a><strong>其他场景</strong></h3><p>从上一个示例中，扩展出来的业务场景，例如想使用 webview 显示 <strong>富文本</strong>，只需要向<strong>source</strong>字段赋值即可。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a><strong>代码</strong></h3><p><a href="https://github.com/lianglei777/demos/tree/RNFaceDemo">DEMO</a>，<br>主要关注 WebviewDemo.js 文件</p>
+]]></content>
+      <categories>
+        <category>Study</category>
+        <category>Work</category>
+      </categories>
+      <tags>
+        <tag>Work</tag>
+        <tag>ReactNative</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>react native 封装人脸 检测、美颜组件</title>
     <url>/post/202106201752/</url>
     <content><![CDATA[<p><strong>本组件目前只能用在React Native 的iOS端</strong></p>

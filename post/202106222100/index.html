@@ -20,29 +20,29 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <meta name="hexo-config" content="{&quot;hostname&quot;:&quot;lianglei777.github.io&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:true,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;/search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}">
-<meta name="description" content="新工作用到的新东西记录一下 换了工作，项目中用到了之前了解过但是没用过或者没听过的东西，这里记录一下，边学边填。包括lerna、redux-saga，Immutable.js、video-react、re-resizable、Umi， 以及一些基础的html相关的api">
+<meta name="description" content="官方 的 webview 组件。API文档。这里主要介绍一下使用场景  1$ npm install react-native-webview">
 <meta property="og:type" content="article">
-<meta property="og:title" content="新工作用到的东西">
-<meta property="og:url" content="https://lianglei777.github.io/post/202105192041/index.html">
+<meta property="og:title" content="react native 中 webview 的使用场景">
+<meta property="og:url" content="https://lianglei777.github.io/post/202106222100/index.html">
 <meta property="og:site_name" content="Leon">
-<meta property="og:description" content="新工作用到的新东西记录一下 换了工作，项目中用到了之前了解过但是没用过或者没听过的东西，这里记录一下，边学边填。包括lerna、redux-saga，Immutable.js、video-react、re-resizable、Umi， 以及一些基础的html相关的api">
+<meta property="og:description" content="官方 的 webview 组件。API文档。这里主要介绍一下使用场景  1$ npm install react-native-webview">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-05-19T12:14:41.000Z">
-<meta property="article:modified_time" content="2021-05-30T15:06:59.390Z">
+<meta property="article:published_time" content="2021-06-22T13:33:00.000Z">
+<meta property="article:modified_time" content="2021-06-22T15:39:56.330Z">
 <meta property="article:author" content="lianglei">
-<meta property="article:tag" content="React">
 <meta property="article:tag" content="Work">
+<meta property="article:tag" content="ReactNative">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://lianglei777.github.io/post/202105192041/">
+<link rel="canonical" href="https://lianglei777.github.io/post/202106222100/">
 
 
 
 <meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;}">
 <meta name="hexo-config-calendar" content>
 <script data-pjax src="/js/load-config.js"></script>
-  <title>新工作用到的东西 | Leon</title>
+  <title>react native 中 webview 的使用场景 | Leon</title>
   
 
 
@@ -147,7 +147,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B0%E5%B7%A5%E4%BD%9C%E7%94%A8%E5%88%B0%E7%9A%84%E6%96%B0%E4%B8%9C%E8%A5%BF%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8B"><span class="nav-number">1.</span> <span class="nav-text">新工作用到的新东西记录一下</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Lerna"><span class="nav-number">1.1.</span> <span class="nav-text">Lerna</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#redux%E3%80%81redux-saga"><span class="nav-number">1.2.</span> <span class="nav-text">redux、redux-saga</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Immutable-js"><span class="nav-number">1.3.</span> <span class="nav-text">Immutable.js</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">常规使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%9C%E4%B8%BA%E7%99%BB%E5%BD%95%E5%85%A5%E5%8F%A3%E5%9C%BA%E6%99%AF"><span class="nav-number">2.</span> <span class="nav-text">作为登录入口场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E6%A8%A1%E5%9D%97%E5%B5%8C%E5%85%A5"><span class="nav-number">3.</span> <span class="nav-text">功能模块嵌入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E5%9C%BA%E6%99%AF"><span class="nav-number">4.</span> <span class="nav-text">其他场景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">代码</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -226,7 +226,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lianglei777.github.io/post/202105192041/">
+    <link itemprop="mainEntityOfPage" href="https://lianglei777.github.io/post/202106222100/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.png">
@@ -239,7 +239,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          新工作用到的东西
+          react native 中 webview 的使用场景
         </h1>
 
         <div class="post-meta-container">
@@ -251,16 +251,10 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-05-19 20:14:41" itemprop="dateCreated datePublished" datetime="2021-05-19T20:14:41+08:00">2021-05-19</time>
+      <time title="创建时间：2021-06-22 21:33:00 / 修改时间：23:39:56" itemprop="dateCreated datePublished" datetime="2021-06-22T21:33:00+08:00">2021-06-22</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-05-30 23:06:59" itemprop="dateModified" datetime="2021-05-30T23:06:59+08:00">2021-05-30</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -283,14 +277,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>926</span>
+      <span>2.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -301,35 +295,32 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h3 id="新工作用到的新东西记录一下"><a href="#新工作用到的新东西记录一下" class="headerlink" title="新工作用到的新东西记录一下"></a>新工作用到的新东西记录一下</h3><blockquote>
-<p>换了工作，项目中用到了之前了解过但是没用过或者没听过的东西，这里记录一下，边学边填。<br>包括lerna、redux-saga，Immutable.js、video-react、re-resizable、Umi， 以及一些基础的html相关的api</p>
+        <blockquote>
+<p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/react-native-webview/react-native-webview">官方</a> 的 webview 组件。<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/react-native-webview/react-native-webview/blob/master/docs/Reference.md">API文档</a>。这里主要介绍一下使用场景</p>
 </blockquote>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">npm</span> install react-<span class="keyword">native</span>-webview</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
 
-<h4 id="Lerna"><a href="#Lerna" class="headerlink" title="Lerna"></a><strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/lerna/lerna/">Lerna</a></strong></h4><blockquote>
-<p>使用了 git + npm 管理多个前端项目存储库的工具。 vue、babel、react 都在用的 Monorepo 管理方式。</p>
+<h3 id="常规使用"><a href="#常规使用" class="headerlink" title="常规使用"></a><strong>常规使用</strong></h3><p>作为一般的网页入口，传入 uri 链接。这里需要注意 android 环境下的 <strong>mixedContentMode</strong>，此参数允许加载 <strong>http</strong> 链接</p>
+<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml">&lt;WebView</span></span><br><span class="line"><span class="xml">    ref=&#123;ref =&gt; (this.webview = ref)&#125;</span></span><br><span class="line"><span class="xml">    source=</span><span class="template-variable">&#123;&#123; <span class="name">uri:</span> <span class="string">&#x27;https://www.baidu.com/&#x27;</span> &#125;&#125;</span></span><br><span class="line"><span class="xml">    style=</span><span class="template-variable">&#123;&#123; <span class="name">flex:</span> <span class="number">1</span> &#125;&#125;</span></span><br><span class="line"><span class="xml">    mixedContentMode=&quot;compatibility&quot; // Android: WebView 是否应该允许安全链接（https）页面中加载非安全链接（http）的内容,</span></span><br><span class="line"><span class="xml">/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="作为登录入口场景"><a href="#作为登录入口场景" class="headerlink" title="作为登录入口场景"></a><strong>作为登录入口场景</strong></h3><blockquote>
+<p>例如：一款 toB 的 app，面对很多家客户，每家客户都有自己的登录系统界面，并且客户要求接入自己的登录系统。</p>
 </blockquote>
-<ul>
-<li><p>多个项目在一个目录下，每个项目都有各自的package.json, 根目录下执行 lerna bootstrap, lerna会将各个子项目的依赖下载，统一放在一个node_modules中（在根目录下）。</p>
-</li>
-<li><p>子项目可以使用一个脚手架。</p>
-</li>
-<li><p>可以单独给某个子项目添加依赖，也可以统一添加相同依赖。还可以将子项目a作为依赖加到子项目b中。</p>
-</li>
-<li><p>生成统一的changelog，统一的版本。</p>
-</li>
-</ul>
-<p>学习链接： <a target="_blank" rel="external nofollow noopener noreferrer" href="https://juejin.cn/post/6844903918279852046">掘金1</a></p>
-<h4 id="redux、redux-saga"><a href="#redux、redux-saga" class="headerlink" title="redux、redux-saga"></a><strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://redux.js.org/">redux</a>、<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/hmillison/redux-saga">redux-saga</a></strong></h4><blockquote>
-<p>redux: 前端的状态管理库。redux-saga: 在redux中使用异步方法的库</p>
-</blockquote>
-<ul>
-<li><p>之前做RN的项目引入过 redux，使用过一段时间，但是后来觉得写法太繁琐，改用了基于redux封装的另一个状态管理库 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/rematch/rematch">rematch</a>, 这个库写法上会简便一些，不用定义 “ action “，个人觉得更好用。后来H5的项目使用了 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/mobxjs/mobx">mobx</a>，觉得mbox写法和理解上更易用了,很是喜欢。<strong>当然了简单易用只是一个方面，适合项目才是最好的</strong>，比如redux、rematch写法虽然繁琐，但是在多页面共享”状态”的时候，多交互、多数据源的时候，优势就很大，比如分权限的管理类网站。而mobx在写单页面应用的时候显的更方便易用，，比如手机上的H5应用，之前做过的 考勤类软件：”劳动力管理”，每个模块都是单独的页面功能，功能模块关联性不强。</p>
-</li>
-<li><p>redux-saga: 是目前项目新遇到的，之前没使用过。redux-saga 是一个 redux 中间件，主要是用于redux 的异步操作，使用了 es6的 Generator、yield，写起来没有回调地狱(就是异步嵌套)，目前看来主要用法，就提 redux-saga 提供的 call、put、take、take-every等不同场景的方法。<a target="_blank" rel="external nofollow noopener noreferrer" href="https://redux-saga-in-chinese.js.org/docs/advanced/index.html">中文文档</a></p>
-</li>
-</ul>
-<h4 id="Immutable-js"><a href="#Immutable-js" class="headerlink" title="Immutable.js"></a><strong><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/immutable-js/immutable-js">Immutable.js</a></strong></h4>
+<p>这个时候就需要 webview 接入登录界面之后，进行一些 “值拦截”，进行登录状态判断。这里主要用到 webview 的 <strong>onNavigationStateChange</strong> 参数。她会实时回调网页导航信息的变化，例如下面</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">&quot;canGoBack&quot;</span>: <span class="literal">false</span>, <span class="attr">&quot;canGoForward&quot;</span>: <span class="literal">false</span>, <span class="attr">&quot;loading&quot;</span>: <span class="literal">true</span>, <span class="attr">&quot;navigationType&quot;</span>: <span class="string">&quot;other&quot;</span>, <span class="attr">&quot;target&quot;</span>: <span class="number">229</span>, <span class="attr">&quot;title&quot;</span>: <span class="string">&quot;&quot;</span>, <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://www.baidu.com/&quot;</span>&#125;</span><br></pre></td></tr></table></figure>
+<p>这里主要注意 <strong>url</strong> 字段，网页内部登录完成之后，后端可以发一起一个重定向，前端关注 url 变化，进行登录状态的判断，同时重定向的 url 中可以拼接一些登录信息字段，用于前端登录状态校验等，例如：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123; <span class="attr">&quot;url&quot;</span>: <span class="string">&quot;https://www.baidu.com ? sessionId=xxx &amp; username= xxx&quot;</span> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="功能模块嵌入"><a href="#功能模块嵌入" class="headerlink" title="功能模块嵌入"></a><strong>功能模块嵌入</strong></h3><p>将 webview 作为功能模块载体，这个时候就会涉及到用户交互，需要 rn 与 h5 进行值的互相传递。此时就要react native 向 web 中注入 js，web 也可以主动回传数据到 react native。</p>
+<p>webview 组件提供了 <strong>injectedJavaScript</strong> 用于向 h5 注入js，在 h5 相关方法中使用 <strong>window.ReactNativeWebView.postMessage</strong> 可见进行主动的回调，并且在 webview 的 <strong>onMessage</strong> 中进行字段的监听，以此就可以完成 react 和 h5 的交互。</p>
+<p>示例代码：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> injectJSStr = <span class="string">`</span></span><br><span class="line"><span class="string">  window.injectStr=&#x27;我是注入的字段&#x27;;</span></span><br><span class="line"><span class="string">  var div = document.getElementById(&#x27;testID&#x27;);</span></span><br><span class="line"><span class="string">  div.style.color=&#x27;red&#x27;;</span></span><br><span class="line"><span class="string">  div.style.fontSize=&#x27;100px&#x27;;</span></span><br><span class="line"><span class="string">  `</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> html = <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;html&gt;</span></span><br><span class="line"><span class="string">    &lt;head&gt;&lt;/head&gt;</span></span><br><span class="line"><span class="string">    &lt;body&gt;</span></span><br><span class="line"><span class="string">      &lt;script&gt;</span></span><br><span class="line"><span class="string">        setTimeout(function () &#123;</span></span><br><span class="line"><span class="string">          window.ReactNativeWebView.postMessage(window.injectStr)</span></span><br><span class="line"><span class="string">        &#125;, 2000)</span></span><br><span class="line"><span class="string">      &lt;/script&gt;</span></span><br><span class="line"><span class="string">      &lt;div id=&#x27;testID&#x27;&gt;Hello Word&lt;/div&gt;</span></span><br><span class="line"><span class="string">    &lt;/body&gt;</span></span><br><span class="line"><span class="string">    &lt;/html&gt;</span></span><br><span class="line"><span class="string">  `</span>;</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">&lt;View style=&#123;&#123;<span class="attr">flex</span>: <span class="number">1</span>&#125;&#125;&gt;</span><br><span class="line">    &lt;WebView</span><br><span class="line">        source=&#123;&#123;html&#125;&#125;</span><br><span class="line">        injectedJavaScript=&#123;injectJSStr&#125;</span><br><span class="line">        onMessage=&#123;<span class="function"><span class="params">event</span> =&gt;</span> &#123;</span><br><span class="line">        alert(event.nativeEvent.data);</span><br><span class="line">        &#125;&#125;</span><br><span class="line">    /&gt;</span><br><span class="line">&lt;/View&gt;</span><br></pre></td></tr></table></figure>
+<p>demo 中，webview 使用的是硬编码的 html，通过 <strong>injectedJavaScript</strong>主动注入 了一段<strong>字符串</strong>类型的js代码，并且 html 中主动回传注入的字段，使用 onMessage 来监听回传内容。</p>
+<p>注：一般我进行 js 注入的时候，都会将参数或者方法挂载在<strong>window</strong>对象上。如果 h5 想暴露一些方法给 RN 以注入 js 的方式调用，也可以挂载在 window 上。</p>
+<h3 id="其他场景"><a href="#其他场景" class="headerlink" title="其他场景"></a><strong>其他场景</strong></h3><p>从上一个示例中，扩展出来的业务场景，例如想使用 webview 显示 <strong>富文本</strong>，只需要向<strong>source</strong>字段赋值即可。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a><strong>代码</strong></h3><p><a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/lianglei777/demos/tree/RNFaceDemo">DEMO</a>，<br>主要关注 WebviewDemo.js 文件</p>
+
     </div>
 
     
@@ -350,7 +341,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://lianglei777.github.io/post/202105192041/" title="新工作用到的东西">https://lianglei777.github.io/post/202105192041/</a>
+      <a href="https://lianglei777.github.io/post/202106222100/" title="react native 中 webview 的使用场景">https://lianglei777.github.io/post/202106222100/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -359,22 +350,19 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/React/" rel="tag"> <i class="fa fa-tag"></i> React</a>
               <a href="/tags/Work/" rel="tag"> <i class="fa fa-tag"></i> Work</a>
+              <a href="/tags/ReactNative/" rel="tag"> <i class="fa fa-tag"></i> ReactNative</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/post/202105060952/" rel="prev" title="离开苏州到合肥工作">
-                  <i class="fa fa-chevron-left"></i> 离开苏州到合肥工作
+                <a href="/post/202106201752/" rel="prev" title="react native 封装人脸 检测、美颜组件">
+                  <i class="fa fa-chevron-left"></i> react native 封装人脸 检测、美颜组件
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/post/202106131117/" rel="next" title="react native的js与ios的值传递">
-                  react native的js与ios的值传递 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
