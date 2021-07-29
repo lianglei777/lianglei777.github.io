@@ -529,7 +529,8 @@
   <entry>
     <title>css 盒模型与BFC</title>
     <url>/post/202107252055/</url>
-    <content><![CDATA[<h2 id="1-盒模型"><a href="#1-盒模型" class="headerlink" title="1. 盒模型"></a><strong>1. 盒模型</strong></h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a><strong>分类</strong></h3><h4 id="标准盒模型"><a href="#标准盒模型" class="headerlink" title="标准盒模型"></a><strong>标准盒模型</strong></h4><div align="center">
+    <content><![CDATA[<span id="more"></span>
+<h2 id="1-盒模型"><a href="#1-盒模型" class="headerlink" title="1. 盒模型"></a><strong>1. 盒模型</strong></h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a><strong>分类</strong></h3><h4 id="标准盒模型"><a href="#标准盒模型" class="headerlink" title="标准盒模型"></a><strong>标准盒模型</strong></h4><div align="center">
 <img src="/post/202107252055/1.png" width="80%" height="80%">
 </div>
 包括 margin、border、padding、content，并且 content 部分不包含其他部分。width = content。
