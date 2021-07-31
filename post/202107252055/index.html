@@ -20,12 +20,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <meta name="hexo-config" content="{&quot;hostname&quot;:&quot;lianglei777.github.io&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:true,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;/search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}">
-<meta name="description" content="1. 盒模型分类标准盒模型   包括 margin、border、padding、content，并且 content 部分不包含其他部分。width &#x3D; content。  IE盒模型   组成和标准的盒模型相同，但是IE 盒子模型的 content 部分包含了 border 和 padding。width &#x3D; border + padding + content。  如何设置12box-si">
+<meta name="description" content="盒模型">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css 盒模型与BFC">
 <meta property="og:url" content="https://lianglei777.github.io/post/202107252055/index.html">
 <meta property="og:site_name" content="Leon">
-<meta property="og:description" content="1. 盒模型分类标准盒模型   包括 margin、border、padding、content，并且 content 部分不包含其他部分。width &#x3D; content。  IE盒模型   组成和标准的盒模型相同，但是IE 盒子模型的 content 部分包含了 border 和 padding。width &#x3D; border + padding + content。  如何设置12box-si">
+<meta property="og:description" content="盒模型">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://lianglei777.github.io/post/202107252055/1.png">
 <meta property="og:image" content="https://lianglei777.github.io/post/202107252055/2.png">
@@ -36,7 +36,7 @@
 <meta property="og:image" content="https://lianglei777.github.io/post/202107252055/bfc5.gif">
 <meta property="og:image" content="https://lianglei777.github.io/post/202107252055/bfc6.png">
 <meta property="article:published_time" content="2021-07-25T12:53:10.000Z">
-<meta property="article:modified_time" content="2021-07-29T14:54:57.537Z">
+<meta property="article:modified_time" content="2021-07-31T10:15:57.084Z">
 <meta property="article:author" content="lianglei">
 <meta property="article:tag" content="面试题">
 <meta name="twitter:card" content="summary">
@@ -100,7 +100,7 @@
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">9</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">10</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -155,7 +155,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">1. 盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.1.</span> <span class="nav-text">标准盒模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IE%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">IE盒模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">如何设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-BFC"><span class="nav-number">2.</span> <span class="nav-text">2. BFC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC-%E5%B8%83%E5%B1%80%E7%89%B9%E7%82%B9"><span class="nav-number">2.2.</span> <span class="nav-text">BFC 布局特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC-%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">BFC 触发方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.4.</span> <span class="nav-text">应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91-BFC%EF%BC%8C%E6%AD%A3%E7%A1%AE%E5%B1%95%E7%A4%BA%E8%BE%B9%E6%A1%86"><span class="nav-number">2.4.1.</span> <span class="nav-text">触发 BFC，正确展示边框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%BB%E6%AD%A2margin%E9%87%8D%E5%8F%A0%EF%BC%8C%E5%AE%8C%E6%95%B4%E5%B1%95%E7%A4%BA%E8%BE%B9%E6%A1%86"><span class="nav-number">2.4.2.</span> <span class="nav-text">阻止margin重叠，完整展示边框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%9A%E8%A7%A3%E5%86%B3%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E4%BB%A4%E7%88%B6%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E5%9D%8D%E5%A1%8C%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.4.3.</span> <span class="nav-text">清除浮动：解决浮动元素令父元素高度坍塌的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%9E%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E8%A2%AB%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E8%A6%86%E7%9B%96"><span class="nav-number">2.4.4.</span> <span class="nav-text">非浮动元素被浮动元素覆盖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%A4%E6%A0%8F%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80"><span class="nav-number">2.4.5.</span> <span class="nav-text">两栏适应布局</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.5.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.</span> <span class="nav-text">盒模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">1.1.</span> <span class="nav-text">分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E5%87%86%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.1.</span> <span class="nav-text">标准盒模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IE%E7%9B%92%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.1.2.</span> <span class="nav-text">IE盒模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE"><span class="nav-number">1.2.</span> <span class="nav-text">如何设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BFC"><span class="nav-number">2.</span> <span class="nav-text">BFC</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">2.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC-%E5%B8%83%E5%B1%80%E7%89%B9%E7%82%B9"><span class="nav-number">2.2.</span> <span class="nav-text">BFC 布局特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BFC-%E8%A7%A6%E5%8F%91%E6%96%B9%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">BFC 触发方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="nav-number">2.4.</span> <span class="nav-text">应用场景</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A6%E5%8F%91-BFC%EF%BC%8C%E6%AD%A3%E7%A1%AE%E5%B1%95%E7%A4%BA%E8%BE%B9%E6%A1%86"><span class="nav-number">2.4.1.</span> <span class="nav-text">触发 BFC，正确展示边框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%98%BB%E6%AD%A2margin%E9%87%8D%E5%8F%A0%EF%BC%8C%E5%AE%8C%E6%95%B4%E5%B1%95%E7%A4%BA%E8%BE%B9%E6%A1%86"><span class="nav-number">2.4.2.</span> <span class="nav-text">阻止margin重叠，完整展示边框</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%9A%E8%A7%A3%E5%86%B3%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E4%BB%A4%E7%88%B6%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E5%9D%8D%E5%A1%8C%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.4.3.</span> <span class="nav-text">清除浮动：解决浮动元素令父元素高度坍塌的问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%9D%9E%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E8%A2%AB%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E8%A6%86%E7%9B%96"><span class="nav-number">2.4.4.</span> <span class="nav-text">非浮动元素被浮动元素覆盖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%B8%A4%E6%A0%8F%E9%80%82%E5%BA%94%E5%B8%83%E5%B1%80"><span class="nav-number">2.4.5.</span> <span class="nav-text">两栏适应布局</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">2.5.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -170,7 +170,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -267,7 +267,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-07-29 22:54:57" itemprop="dateModified" datetime="2021-07-29T22:54:57+08:00">2021-07-29</time>
+        <time title="修改时间：2021-07-31 18:15:57" itemprop="dateModified" datetime="2021-07-31T18:15:57+08:00">2021-07-31</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -309,8 +309,9 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <span id="more"></span>
-<h2 id="1-盒模型"><a href="#1-盒模型" class="headerlink" title="1. 盒模型"></a><strong>1. 盒模型</strong></h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a><strong>分类</strong></h3><h4 id="标准盒模型"><a href="#标准盒模型" class="headerlink" title="标准盒模型"></a><strong>标准盒模型</strong></h4><div align="center">
+        <h2 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a><strong>盒模型</strong></h2><span id="more"></span>
+
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a><strong>分类</strong></h3><h4 id="标准盒模型"><a href="#标准盒模型" class="headerlink" title="标准盒模型"></a><strong>标准盒模型</strong></h4><div align="center">
 <img src="/post/202107252055/1.png" width="80%" height="80%">
 </div>
 包括 margin、border、padding、content，并且 content 部分不包含其他部分。width = content。
@@ -324,7 +325,7 @@
 <p>非特殊情况应当使用标准的盒模型进行UI搭建，只需要在html文件中中声明 <strong>DOCTYPE</strong> ,浏览器(包括ie)就会默认使用标准盒模型进行解析。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="2-BFC"><a href="#2-BFC" class="headerlink" title="2. BFC"></a><strong>2. BFC</strong></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a><strong>定义</strong></h3><p><strong>块格式化上下文（Block Formatting Context，BFC)：</strong> 是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。这是 <strong>MDN</strong> 的解释。很是晦涩，看了一些资料个人的理解就是：一种 css 规则，满足 BFC 开启条件的元素区域，就会有 BFC 相关特性，因为比较有特点，所以被单独的定义出来。</p>
+<h2 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a><strong>BFC</strong></h2><h3 id="定义"><a href="#定义" class="headerlink" title="定义"></a><strong>定义</strong></h3><p><strong>块格式化上下文（Block Formatting Context，BFC)：</strong> 是Web页面的可视CSS渲染的一部分，是块盒子的布局过程发生的区域，也是浮动元素与其他元素交互的区域。这是 <strong>MDN</strong> 的解释。很是晦涩，看了一些资料个人的理解就是：一种 css 规则，满足 BFC 开启条件的元素区域，就会有 BFC 相关特性，因为比较有特点，所以被单独的定义出来。</p>
 <h3 id="BFC-布局特点"><a href="#BFC-布局特点" class="headerlink" title="BFC 布局特点"></a><strong>BFC 布局特点</strong></h3><p>或者说如果触发了 BFC，那么区域内布局就会遵循以下规则</p>
 <ul>
 <li>BFC 区域内的布局会和外部隔离开，互不影响,（即 BFC 内部嵌套 BFC，内外也是互不影响的）。</li>
@@ -437,6 +438,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/post/202107291101/" rel="next" title="CSS选择器优先级与层叠上下文">
+                  CSS选择器优先级与层叠上下文 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>
@@ -468,13 +472,13 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-line"></i>
     </span>
-    <span title="站点总字数">34k</span>
+    <span title="站点总字数">39k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">31 分钟</span>
+    <span title="站点阅读时长">36 分钟</span>
   </span>
 </div>
 
