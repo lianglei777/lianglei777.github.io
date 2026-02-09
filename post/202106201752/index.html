@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<meta name="hexo-config" content="{&quot;hostname&quot;:&quot;lianglei777.github.io&quot;,&quot;root&quot;:&quot;/&quot;,&quot;images&quot;:&quot;/images&quot;,&quot;scheme&quot;:&quot;Pisces&quot;,&quot;version&quot;:&quot;8.3.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:true,&quot;bookmark&quot;:{&quot;enable&quot;:true,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:true,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;},&quot;path&quot;:&quot;/search.xml&quot;,&quot;localsearch&quot;:{&quot;enable&quot;:true,&quot;trigger&quot;:&quot;auto&quot;,&quot;top_n_per_article&quot;:1,&quot;unescape&quot;:false,&quot;preload&quot;:false}}">
+<meta name="description" content="本组件目前只能用在React Native 的iOS端  本组件来之实际中的开发需求：可以检测并且标记人脸，实现基本的美颜，可进行拍照、换行镜头等基础相机功能。官方组件封装 教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="react native 封装人脸 检测、美颜组件">
+<meta property="og:url" content="https://lianglei777.github.io/post/202106201752/index.html">
+<meta property="og:site_name" content="Leon">
+<meta property="og:description" content="本组件目前只能用在React Native 的iOS端  本组件来之实际中的开发需求：可以检测并且标记人脸，实现基本的美颜，可进行拍照、换行镜头等基础相机功能。官方组件封装 教程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lianglei777.github.io/post/202106201752/1.png">
+<meta property="og:image" content="https://lianglei777.github.io/post/202106201752/error1.png">
+<meta property="og:image" content="https://lianglei777.github.io/post/202106201752/fix1.png">
+<meta property="og:image" content="https://lianglei777.github.io/post/202106201752/error2.png">
+<meta property="og:image" content="https://lianglei777.github.io/post/202106201752/fix2.png">
+<meta property="og:image" content="https://lianglei777.github.io/post/202106201752/fix3.png">
+<meta property="article:published_time" content="2021-06-20T09:52:00.000Z">
+<meta property="article:modified_time" content="2026-02-09T02:01:12.013Z">
+<meta property="article:author" content="lianglei">
+<meta property="article:tag" content="Work">
+<meta property="article:tag" content="ReactNative">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lianglei777.github.io/post/202106201752/1.png">
+
+
+<link rel="canonical" href="https://lianglei777.github.io/post/202106201752/">
+
+
+
+<meta name="hexo-config-page" content="{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;}">
+<meta name="hexo-config-calendar" content>
+<script data-pjax src="/js/load-config.js"></script>
+  <title>react native 封装人脸 检测、美颜组件 | Leon</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Leon</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">Keep It Simple</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">7</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">8</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">12</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80" placeholder="搜索..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6%E5%8A%9F%E8%83%BD"><span class="nav-number">1.</span> <span class="nav-text">组件功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">如何使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">代码文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85GPUImage"><span class="nav-number">2.2.</span> <span class="nav-text">安装GPUImage</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%94%99%E8%AF%AF1"><span class="nav-number">2.2.1.</span> <span class="nav-text">错误1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%94%99%E8%AF%AF2"><span class="nav-number">2.2.2.</span> <span class="nav-text">错误2</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#GPUImage"><span class="nav-number">3.1.</span> <span class="nav-text">GPUImage</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#FSKGPUImageBeautyFilter"><span class="nav-number">3.2.</span> <span class="nav-text">FSKGPUImageBeautyFilter</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#RCTFaceDetectView"><span class="nav-number">3.3.</span> <span class="nav-text">RCTFaceDetectView</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A6%81%E7%82%B9%E4%BB%8B%E7%BB%8D"><span class="nav-number">3.4.</span> <span class="nav-text">要点介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E5%88%B0%E4%BA%BA%E8%84%B8%E7%9B%B8%E5%85%B3%E7%9A%84%E5%8F%82%E6%95%B0"><span class="nav-number">3.4.1.</span> <span class="nav-text">如何获取到人脸相关的参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%BB%98%E5%88%B6%E9%9D%A2%E9%83%A8%E6%A1%86"><span class="nav-number">3.4.2.</span> <span class="nav-text">如何绘制面部框</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E7%BE%8E%E9%A2%9C"><span class="nav-number">3.4.3.</span> <span class="nav-text">如何进行美颜</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#RCTFaceDetectViewManager"><span class="nav-number">4.</span> <span class="nav-text">RCTFaceDetectViewManager</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8E%E8%AF%9D"><span class="nav-number">5.</span> <span class="nav-text">后话</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="lianglei" src="/uploads/avatar.png">
+  <p class="site-author-name" itemprop="name">lianglei</p>
+  <div class="site-description" itemprop="description">Hard work，Love life，Self-discipline</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lianglei777" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lianglei777" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="external nofollow noopener noreferrer" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+  <a href="https://github.com/lianglei777" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="external nofollow noopener noreferrer" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://lianglei777.github.io/post/202106201752/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.png">
+      <meta itemprop="name" content="lianglei">
+      <meta itemprop="description" content="Hard work，Love life，Self-discipline">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Leon">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          react native 封装人脸 检测、美颜组件
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+
+  
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-20 17:52:00" itemprop="dateCreated datePublished" datetime="2021-06-20T17:52:00+08:00">2021-06-20</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2026-02-09 10:01:12" itemprop="dateModified" datetime="2026-02-09T10:01:12+08:00">2026-02-09</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Study/" itemprop="url" rel="index"><span itemprop="name">Study</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Study/Work/" itemprop="url" rel="index"><span itemprop="name">Work</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><strong>本组件目前只能用在React Native 的iOS端</strong></p>
+<blockquote>
+<p>本组件来之实际中的开发需求：可以检测并且标记人脸，实现基本的美颜，可进行拍照、换行镜头等基础相机功能。官方组件封装 <a target="_blank" rel="external nofollow noopener noreferrer" href="https://www.react-native.cn/docs/native-components-ios">教程</a></p>
+</blockquote>
+<span id="more"></span>
+<p><strong>本文代码：<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/lianglei777/demos/tree/RNFaceDemo">DEMO</a></strong><br>运行demo</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git <span class="built_in">clone</span> https://github.com/lianglei777/demos.git</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> demos</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git checkout RNFaceDemo</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> RNFaceDemo</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">npm install</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">cd</span> ios</span> </span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">pod install</span></span><br></pre></td></tr></table></figure>
+<p>如果 pod install 失败，请参考 <a target="_blank" rel="external nofollow noopener noreferrer" href="http://localhost:4000/post/202106131117/">此文</a> 的 cocoapods 部分。</p>
+<h3 id="组件功能"><a href="#组件功能" class="headerlink" title="组件功能"></a><strong>组件功能</strong></h3><ul>
+<li>人脸标记，返回人脸个数</li>
+<li>滤镜美颜（基于GPUImage），美颜程度可调节（0~9）</li>
+<li>相机功能，包括拍照、转换前后镜头，其余相机功能可自行扩展</li>
+</ul>
+<p>效果如下图</p>
+<div align="center">
+<img src="/post/202106201752/1.png" width="20%" height="20%">
+</div>
+
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a><strong>如何使用</strong></h3><h4 id="代码文件"><a href="#代码文件" class="headerlink" title="代码文件"></a><strong>代码文件</strong></h4><ol>
+<li>添加 ios 文件夹下的 <strong>Camera</strong> 到自己项目的 ios 目录下，</li>
+<li>ios中添加相关相机相册权限配置<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>NSCameraUsageDescription<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>上传头像时，使用您的相机来拍摄照片<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>NSPhotoLibraryAddUsageDescription<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>保存图片时,使用您的相册来保存照片<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>NSPhotoLibraryUsageDescription<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>上传头像时，使用您的相册来获取图片<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>js 层使用参考 <strong>NativeModule/RNFaceDetectView.js</strong> 和 <strong>Pages/ComponentBridgeDemo.js</strong></li>
+</ol>
+<h4 id="安装GPUImage"><a href="#安装GPUImage" class="headerlink" title="安装GPUImage"></a><strong>安装GPUImage</strong></h4><p><strong>Podfile</strong> 文件中添加如下内容， 运行 pod install</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pod <span class="string">&#x27;GPUImage&#x27;</span>,:<span class="function"><span class="params">git</span> =&gt;</span> <span class="string">&#x27;https://github.com/lianglei777/GPUImage.git&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>cmd + b 进行编译，如果遇到以下问题</p>
+<h5 id="错误1"><a href="#错误1" class="headerlink" title="错误1"></a><strong>错误1</strong></h5><div align="center">
+<img src="/post/202106201752/error1.png" width="80%" height="80%">
+</div>
+
+<p>解决方法：<br>按照如下途中点击步骤，添加 libGPUImage.a 文件</p>
+<div align="center">
+<img src="/post/202106201752/fix1.png" width="80%" height="80%">
+</div>
+
+<h5 id="错误2"><a href="#错误2" class="headerlink" title="错误2"></a><strong>错误2</strong></h5><div align="center">
+<img src="/post/202106201752/error2.png" width="80%" height="80%">
+</div>
+
+<p>解决方法：<br>Build Settings –》 Library Search Paths ，<strong>双击</strong>添加 “${PODS_CONFIGURATION_BUILD_DIR}/GPUImage”，选择 non-recursive</p>
+<div align="center">
+<img src="/post/202106201752/fix2.png" width="80%" height="80%">
+</div>
+
+<div align="center">
+<img src="/post/202106201752/fix3.png" width="80%" height="80%">
+</div>
+
+
+
+
+<h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a><strong>介绍</strong></h3><p>代码中已经加了比较多的注释，这里主要根据文件来说一些我觉得要关注的点。</p>
+<h4 id="GPUImage"><a href="#GPUImage" class="headerlink" title="GPUImage"></a><strong>GPUImage</strong></h4><p><a href="FSKGPUImageBeautyFilter">GPUImage</a> 是一款利用GPU添加滤镜效果，美化图像的 Object-C 库，但是可惜的是 swift 出现之后作者放弃维护了，需要修改一些代码才能运行在较新的iOS版本中，<a target="_blank" rel="external nofollow noopener noreferrer" href="https://github.com/lianglei777/GPUImage">这里</a>是我修改之后的 GPUImage 库，也是组件中在用的</p>
+<h4 id="FSKGPUImageBeautyFilter"><a href="#FSKGPUImageBeautyFilter" class="headerlink" title="FSKGPUImageBeautyFilter"></a><strong>FSKGPUImageBeautyFilter</strong></h4><p>FSKGPUImageBeautyFilter 是基于 <a href="FSKGPUImageBeautyFilter">GPUImage</a> 的美颜滤镜，可以通过三个维度调整美颜效果。</p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/** 美颜程度 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="built_in">CGFloat</span> beautyLevel;</span><br><span class="line"><span class="comment">/** 美白程度 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="built_in">CGFloat</span> brightLevel;</span><br><span class="line"><span class="comment">/** 色调强度 */</span></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>) <span class="built_in">CGFloat</span> toneLevel;</span><br></pre></td></tr></table></figure>
+
+<p>这里需要注意 FSKGPUImageBeautyFilter.m 文件中 initWithFragmentShaderFromString 的定义方式，<strong>传入的着色器参数如果不懂相关内容请不要修改，也不要为了代码美观去添加空格个或则换行</strong>, 这都是我踩过的大坑，目前的代码都是调试验证过的，没有问题放心使用。</p>
+<h4 id="RCTFaceDetectView"><a href="#RCTFaceDetectView" class="headerlink" title="RCTFaceDetectView"></a><strong>RCTFaceDetectView</strong></h4><p>这里是封装组件的主要代码</p>
+<p><strong>RCTFaceDetectView.h</strong></p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在 js 组件中使用的回调方法, 必须使用 RCTBubblingEventBlock 来定义</span></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>)RCTBubblingEventBlock onFaceCallback;</span><br><span class="line"><span class="comment">//传入的美颜参数</span></span><br><span class="line"><span class="keyword">@property</span>(<span class="keyword">nonatomic</span>,<span class="keyword">copy</span>)<span class="built_in">NSString</span> *beautyLevel;</span><br><span class="line"></span><br><span class="line">+ (<span class="keyword">instancetype</span>)sharedInstance; <span class="comment">// 单例</span></span><br><span class="line">- (<span class="built_in">UIView</span> *)initBeautifyFaceView;  <span class="comment">// 初始化相机界面</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//相机切换前后摄像头</span></span><br><span class="line">- (<span class="type">void</span>)switchCameraFrontOrBack;</span><br><span class="line"><span class="comment">//拍照</span></span><br><span class="line">-(<span class="type">void</span>)takeFaceDetectCamera:(RCTResponseSenderBlock)successBlock;</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置美颜系数</span></span><br><span class="line">-(<span class="type">void</span>)setBeautyLevel:(<span class="built_in">NSString</span> *)level;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 停止相机捕捉</span></span><br><span class="line">-(<span class="type">void</span>)stopCamera;</span><br></pre></td></tr></table></figure>
+
+<p>此处需要注意</p>
+<ul>
+<li><p>onFaceCallback 是在 js 组件中使用的回调方法，必须使用 RCTBubblingEventBlock 定义，beautyLevel 是 prop 传参，使用正常类型就可以</p>
+</li>
+<li><p>switchCameraFrontOrBack、takeFaceDetectCamera、stopCamera 是组件的功能方法，之前由于需求的原因，没有封装为组件的传参方法，可以自定义相关调用方法暴露到 js 中，暴露方法<a href="https://lianglei777.github.io/post/202106131117/#more">参考</a> 中原生方法的封装。写法如下:</p>
+</li>
+</ul>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#pragma</span> <span class="selector-tag">mark</span> <span class="selector-tag">-</span> 人脸检测相机：拍照回调拍照图片<span class="selector-tag">base64</span></span><br><span class="line"><span class="selector-tag">RCT_REMAP_METHOD</span>(takeFaceDetectCameraWithCallback,<span class="attribute">takeFaceDetectCamera</span>:(RCTResponseSenderBlock)successBlock)&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="selector-tag">dispatch_async</span>(<span class="built_in">dispatch_get_main_queue</span>(), ^&#123;</span><br><span class="line">    <span class="selector-attr">[[RCTFaceDetectView sharedInstance]</span> <span class="selector-tag">takeFaceDetectCamera</span>:<span class="selector-tag">successBlock</span>];</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#pragma</span> <span class="selector-tag">mark</span> <span class="selector-tag">-</span> 人脸检测相机：前后摄像头切换</span><br><span class="line"><span class="selector-tag">RCT_REMAP_METHOD</span>(switchCameraFrontOrBack,switchCameraFrontOrBack)&#123;</span><br><span class="line">  <span class="selector-tag">dispatch_async</span>(<span class="built_in">dispatch_get_main_queue</span>(), ^&#123;</span><br><span class="line">    <span class="selector-attr">[[RCTFaceDetectView sharedInstance]</span> <span class="selector-tag">switchCameraFrontOrBack</span>];</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#pragma</span> <span class="selector-tag">mark</span> <span class="selector-tag">-</span> 人脸检测相机：美颜系数</span><br><span class="line"><span class="selector-tag">RCT_REMAP_METHOD</span>(setFilterLevel,<span class="attribute">setBeautyLevel</span>:(float)level)&#123;</span><br><span class="line">  <span class="selector-tag">dispatch_async</span>(<span class="built_in">dispatch_get_main_queue</span>(), ^&#123;</span><br><span class="line">    <span class="selector-attr">[[RCTFaceDetectView sharedInstance]</span> <span class="selector-tag">setBeautyLevel</span>: <span class="selector-attr">[NSString stringWithFormat:@<span class="string">&quot;%f&quot;</span>,level]</span>];</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-id">#pragma</span> <span class="selector-tag">mark</span> <span class="selector-tag">--</span>停止视频流<span class="selector-tag">--</span></span><br><span class="line"><span class="selector-tag">RCT_EXPORT_METHOD</span>(stopFaceDetectCamera) &#123;</span><br><span class="line">   <span class="selector-attr">[[RCTFaceDetectView sharedInstance]</span> <span class="selector-tag">stopCamera</span>];</span><br><span class="line">   <span class="selector-attr">[[RCTFaceDetectView sharedInstance]</span> <span class="selector-tag">unobserveGlobalNotifications</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>RCTFaceDetectView.m</strong></p>
+<h4 id="要点介绍"><a href="#要点介绍" class="headerlink" title="要点介绍"></a><strong>要点介绍</strong></h4><h5 id="如何获取到人脸相关的参数"><a href="#如何获取到人脸相关的参数" class="headerlink" title="如何获取到人脸相关的参数"></a><strong>如何获取到人脸相关的参数</strong></h5><p>需要实现ios的代理方法，如下 </p>
+<figure class="highlight objectivec"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> mark - AVCaptureMetadataOutputObjectsDelegate</span></span><br><span class="line">- (<span class="type">void</span>)captureOutput:(<span class="built_in">AVCaptureOutput</span> *)captureOutput didOutputMetadataObjects:(<span class="built_in">NSArray</span> *)metadataObjects fromConnection:(<span class="built_in">AVCaptureConnection</span> *)connection &#123;</span><br><span class="line">  ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>metadataObjects</strong> 参数中即包含了面部个数以及面部在摄像头中的坐标位置。</p>
+<h5 id="如何绘制面部框"><a href="#如何绘制面部框" class="headerlink" title="如何绘制面部框"></a><strong>如何绘制面部框</strong></h5><p>此处需要进行坐标转换，将面部在摄像头中的坐标转为在屏幕中的坐标，此处需要使用 <strong>transformedMetadataObjectForMetadataObject</strong> 方法，具体请查看代码</p>
+<h5 id="如何进行美颜"><a href="#如何进行美颜" class="headerlink" title="如何进行美颜"></a><strong>如何进行美颜</strong></h5><p>在 GPUImage 中使用 FSKGPUImageBeautyFilter 滤镜，常规写法。</p>
+<h3 id="RCTFaceDetectViewManager"><a href="#RCTFaceDetectViewManager" class="headerlink" title="RCTFaceDetectViewManager"></a><strong>RCTFaceDetectViewManager</strong></h3><p>将 RCTFaceDetectView 封装的原生组件，暴露到 js 层</p>
+<p><strong>更多内容运行 demo，阅读代码</strong></p>
+<h3 id="后话"><a href="#后话" class="headerlink" title="后话"></a><strong>后话</strong></h3><p>在写这篇文章的时候，本计划尽量写得详细，但是实际写的过程，有些东西如果细写我就觉得很啰嗦，所以写得时候就采用简略要点的形式。代码中注释很多，只要仔细阅读，就可以看明白和使用起来。</p>
+<p>记得当初做这个需求的时候，花了将近两周的时间，去调研，去开发。如何获取面部数据以及如何进行面部绘制、如何实现滤镜美颜、如何进行iOS原生组件封装、以及如何将这些功能组合在一起。当时并没有找到合适的开源组件或者demo进行参照，就是靠分析功能点、逐步开发组合起来的，写出来之后还是成就感满满的。</p>
+<p>请原谅只有 iOS 组件，因为我并不熟悉 Android。</p>
+
+    </div>
+
+    
+    
+    
+
+    
+      <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束 <i class="fa fa-heart"></i> 感谢阅读-------------</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>lianglei
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://lianglei777.github.io/post/202106201752/" title="react native 封装人脸 检测、美颜组件">https://lianglei777.github.io/post/202106201752/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="external nofollow noopener noreferrer" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Work/" rel="tag"> <i class="fa fa-tag"></i> Work</a>
+              <a href="/tags/ReactNative/" rel="tag"> <i class="fa fa-tag"></i> ReactNative</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/202106131117/" rel="prev" title="react native的js与ios的值传递">
+                  <i class="fa fa-chevron-left"></i> react native的js与ios的值传递
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/202106222100/" rel="next" title="react native 中 webview 的使用场景">
+                  react native 中 webview 的使用场景 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2026</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">lianglei</span>
+</div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+    <span title="站点总字数">51k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">46 分钟</span>
+  </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
